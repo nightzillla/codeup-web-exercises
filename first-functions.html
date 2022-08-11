@@ -11,7 +11,7 @@
         return 2 * pi * radius;
     }
 
-    let number = 20;
+    // let number = 20;
     //if (number % 2 === 0) {
     // console.log("That number is even.");
     //} else {
@@ -30,12 +30,156 @@
     // function isOdd(number){
     //     return Math.abs(number) % 2 === 1;
     // }
-    if (number % 5 === 0 && number % 2 === 0) {
-        console.log("That number is divisible by both 5 and 3");
-    } else {
-        console.log("That number is either not divisible by 5 or not divisible by 3 or both.");
+    // if (number % 5 === 0 && number % 2 === 0) {
+    //     console.log("That number is divisible by both 5 and 3");
+    // } else {
+    //     console.log("That number is either not divisible by 5 or not divisible by 3 or both.");
+    // }
+
+    // function divisibleByFiveAndThree(number){
+    //     return number % 5 === 0 || number % 3 === 0;
+    // }
+
+    // Mini-exercise: write a function that returns true if a number is divisible by either 7 or 3, or false if a number is divisible by neither 7 nor 3.
+    // function divisibleBySevenAndThree(number){
+    //     return number % 7 === 0 || number % 3 === 0;
+    //
+    //
+
+    // Mini-exercise 2: write a function that returns true if a number is divisible by either 3 or 2, or false if it is divisible by neither 2 nor 3.
+    // function divisibleByThreeOrTwo(number){
+    //     return number % 3 === 0 || number % 2 === 0;
+
+    // Mini-exercise 3: write a function that returns true if a number is both odd and divisible by 3, or false if the number is neither odd nor divisible by 3.
+    // function oddDivisibleByThree(number){
+    //     return number & 2 === 1 && number 3 === 0;
+
+    // Mini-exercise 4: modify the above function so that it returns true if the number is either odd or divisible by 3, or false if it is neither odd nor divisible by 3
+        function oddOrDivisibleByThree (number){
+            return number % 2 === 1 || number % 3 === 0;
+        }
+
+    // String Variable
+    // concatenation add [" "] to create space
+    // let myName = "Danny";
+    // let myLastName = "Nguyen";
+    // let myFullName = myName + " " + myLastName;
+    // console.log(myFullName);
+    // console.log(`${myName} ${myLastName}`);
+
+    let x = 1;
+    x = x + 1;
+    console.log(x);
+
+    let sentence = " All the world";
+    sentence = sentence + "'s a stage";
+    console.log(sentence);
+
+    console.log("Shakespeare said: \"All the world's a stage\"");
+    console.log(`Shakespeare said: "All the world's a stage"`);
+    // Mini-exercise.  Write a function that takes a person's first, middle, and last names and returns their full name.
+    // let myName = "John";
+    // let myMiddleName = "Travis";
+    // let myLastName = "Scott";
+    // console.log(`${myName} ${myMiddleName} ${myLastName}`); <--- my example
+    function fullName(firstName, middleName, lastName){
+        return `${firstName} ${middleName} ${lastName}`;
     }
 
+    // Mini exercise. Write a function that takes a house number, street name, city, state, and zip code and returns the full address.
+    // let houseNumber = "808,";
+    // let streetName = "bob";
+    // let city = "San Antonio,";
+    // let state = "TX,";
+    // let zipCode = "78188,";
+    // console.log(`${houseNumber} ${streetName} ${city} ${state} ${zipCode}`);
+    function address(houseNumber, streetName, city, state, zipCode) {
+        return `${houseNumber} ${streetName} ${city} ${state} ${zipCode}`;
+    }
+    // Bonus.  Write a function that takes a number representing the temperature and a boolean representing whether the temperature is Fahrenheit or not.  If it is Fahrenheit, the function converts to Celsius.  Otherwise, it convets to Fahrenheit.  Look up the Fahrenheit to Celsius conversion formula online.
+    function temperatureConversion(temperature, isFahrenheit){
+        if (isFahrenheit === true) {
+            return (temperature - 32) * 5 / 9;
+        } else {
+            return (temperature * 9/5) + 32;
+        }
+    }
+    //     Bonus.  Change your functions for liters to gallons and miles-kilometers so they convert both ways.
+    function liquidConversion(l, gal) {
+        if (gal === true) {
+            return l / 3.8 + "gallons";
+        } else {
+            return gal * 3.8 + "liters";
+        }
+    }
+
+    // function distanceConversion(distance, isMiles){
+    //     if (isMiles === true) {
+    //         return distance * 1.609 + "kilometers";
+    //     } else {
+    //         return distance * 0.6213 + "miles";
+    //     }
+
+    // String Exercise
+    // Create a function that takes a string and returns it in upper case.
+    function upperCase(name) {
+        return name.toUpperCase();
+    }
+    console.log(upperCase("Danny"));
+    // let result = upperCase("Danny");
+    //console.log(result);
+
+    // Create a function that takes a string and returns it in lower case.
+    function lowerCase(str) {
+        return str.toLowerCase();
+    }
+    console.log(lowerCase("Danny"));
+
+    // Create a function that takes a string and trims any leading or trailing blank spaces.
+    // let text = "  Hello World!   ";
+    // let result = text.trim();{
+    // }
+    // console.log(result);
+    function trim(str){
+        return str.trim();
+    }
+
+    // Create a function that takes a string and returns the number of characters in that string.
+    function length(str){
+        // let characters = str.length;
+        return str.length;
+    }
+    //  Bonus Challenges:
+    //  Create a function that takes a single character and a string and returns the index of the specified character in that string.
+    function indexOfCharacter(char, str) {
+        return str.indexOf(char);
+    }
+    //  Create a function that takes three strings and returns a copy of the first string with the first instance of the second string substituted for the
+    //  Characters of the third string.
+    //  Do the same, but replace all instances of the second string with the characters of the third string.
+    //  Create a function that takes a string and two numbers and returns the subset of the original string assuming the two numbers are indexes.
+
+    // == vs. === // == equality vs === strict equality
+    let numericString = "42"; // numericString is a number in ""
+    // typeOf means tell you what the type is
+    // numberString == theAnswer = true
+    // numberString === theAnswer = false
+    //
+    // let someValue = "42";
+    // if (dataType(someValue) === "number") {
+    //     console.log("That's a number");
+    // } else {
+    //     console.log("That's not a number");
+    // }
+    // 0/0 = NaN ("Not a Number")
+    // isNaN
+    // if (isNaN(value) || type of value === "boolean"){
+    // return false;
+    // } else {
+    //     return true;
+    function isNumber(value){
+         return !(isNaN(value)) || typeof value === "boolean");
+    }
 </script>
 
 </body>
