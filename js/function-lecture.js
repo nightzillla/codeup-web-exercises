@@ -50,7 +50,7 @@ alert("Hello world!");
 
 // function expression
 // const add = function(num1, num2){
-//  return num1 + num2;
+//  return num1a + num2;
 //}
 
 // function declaration
@@ -68,4 +68,4 @@ const add = (num1, num2) => num1 + num2;
 const addTen = number => number + 10;
 
 // if there are no parameters, you use empty parentheses
-const helloWorld = () => "Hello World";
+const helloWorld = () => "Hello World"
