@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise of variables</title>
+</head>
+<body>
+<script src="js/practice_functions.js"></script>
+<script>
+    /* 4 ways to Declare a JavaScript Variable:
+    Using var
+    Using let
+    Using const
+    Using nothing
+    */
+
+    /*Variables are containers for storing data (storing data values)
+    ex
+    var x = 5;
+    var y = 6;
+    var z = x + y;
+     */
+
+    /*
+    Always declare variables with const.
+    If you think the value of the variable can change, use let.
+    example:
+    const price1 = 5;
+    const price2 = 6;
+    let total = price1 + price2;
+     */
+
+
+
+
+
+
+
+
+
+
+
+
+    function calculateCircumference(radius) {
+        const pi = 3.14159;
+        return 2 * pi * radius;
+    }
+
+    function milesToKilometers(mi) {
+        return mi * 1.609;
+  }
+
+    function calculateGallons(gl) {
+        return gl * 3.78541;
+  }
+
+    function calculateFahrenheit(C) {
+        return (C * 9 / 5) + 32;
+    }
+
+    function poundsToKilograms(lb) {
+        return lb * 0.453592;
+    }
+
+    // Write a function that takes two values.  If the values can be converted to numbers, the function should return their product.  Otherwise, the function should return false
+
+    // Write a sayHello function that adds the string "Hello, " to the beginning and "!" to the end of any given input
+    // function sayHello(name){
+    //     return "Hello, " + name + "!";
+    // function sayHello(str){
+    //     return "Hello, " + str + "!";
+    // }
+   function doSomething(){
+        console.log("Danny");
+   }
+   doSomething();
+
+</script>
+
+</body>
+</html>
+
