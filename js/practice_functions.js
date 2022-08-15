@@ -1,9 +1,13 @@
 "use strict";
 // alert("Hello World!");
-
-function helloWorld(){
-    let str = "Hello World!"
-    console.log(str)
+function helloWorld() {
+    let str = "Hello World!"{
+        console.log(str);
+    }
+//re
+// function saySomething(name){
+//     return "Hello," + name;
+//
 }
 
 // * TODO:
@@ -105,3 +109,4 @@ function applyDiscount(price,discount){
 //  *
 //  * > applyDiscount(45.99, 0.12) // 40.4712
 //  */
+

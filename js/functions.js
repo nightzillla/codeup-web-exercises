@@ -8,8 +8,12 @@
  // * Example
  // * > sayHello("codeup") // returns "Hello, codeup!"
  // */
+function sayHello(name){
+    return "Hello, " + name + "!";
+}
+
 //const sayHello = name => "Hello, codeup!";
-const sayHello = (name) => "Hello " + name;
+c//onst sayHello = (name) => "Hello " + name;
 // function sayHello(name)
 // return "Hello, " + name;
 // /**
@@ -18,8 +22,8 @@ const sayHello = (name) => "Hello " + name;
 //  * Store the result of the function call in a variable named 'helloMessage'.
 //  *
 //  * console.log 'helloMessage' to check your work
-let helloMessage = sayHello("Danny")
-console.log(helloMessage)
+let helloMessage = sayHello("Danny");
+console.log(helloMessage);
 
 
 
@@ -30,7 +34,7 @@ console.log(helloMessage)
 //  * console.
 //  */
 
-let myName = "Danny"
+let myName = "Danny";
 sayHello(myName);
 console.log(sayHello(myName));
 
@@ -43,14 +47,18 @@ var random = Math.floor((Math.random() * 3) + 1);
 //  * Create a function called 'isTwo' that takes a number as a parameter.
 //  * The function should return a boolean value based on whether or not the passed
 //  * number is the number 2.
+// function isTwo(num){
+//     if (num === 2){
+//         return true
+//     } else {
+//         return false}
+//     }
+//     let num2 = isTwo(random);
+//     console.log(num2);
 function isTwo(num){
-    if (num === 2){
-        return true
-    } else {
-        return false}
-    }
-    let num2 = isTwo(random);
-    console.log(num2);
+    return num === 2;
+}
+console.log(isTwo(random));
 
 
 //  * Example
@@ -76,14 +84,22 @@ function isTwo(num){
 //  * > calculateTip(0.25, 25.50) // returns 6.375
 //  * > calculateTip(0.15, 33.42) // returns 5.013
 //  */
-// function calculateTip (tip, bill){
+// function calculateTip(tip, bill){
 //     return tip * bill
-// }
-const calculateTip = (tip,bill) => tip * bill
-let totalTip = prompt ("How much do you want to tip?")
-let totalBill = prompt ("Total meal!")
-alert("You paid $" + totalTip * totalBill + " tip");
+// // }
+// const calculateTip = (tip,bill) => tip * bill
+// let totalTip = prompt("How much do you want to tip?")
+// let totalBill = prompt("Total meal!")
+// alert("You paid $" + totalTip * totalBill + " tip");
+function calculateTip(tipPercentage, billTotal){
+    return billTotal * tipPercentage;
+}
 
+
+let total = prompt("what is your bill total?");
+let tipPercentage = prompt("What percentage would you like to tip?");
+let tip = calculatetip(tipPercentage/100, total);
+alert("Your tip is $" + tip.toFixed(2));
 // /**
 //  * TODO:
 //  * Use prompt and alert in combination with your calculateTip function to
@@ -96,8 +112,12 @@ alert("You paid $" + totalTip * totalBill + " tip");
 //  * (before a discount is applied), and a discount percentage (a number between 0
 //  * and 1). It should return the result of applying the discount to the original
 //  * price.
-function applyDiscount(price, discount){
-    return price*(1*discount);
+// function applyDiscount(price, discount){
+//     return price*(1*discount);
+// }
+function applyDiscount(priceBeforeDiscount, discountPercentage){
+    return priceBeforeDiscount *(1 - discountPercentage);
+    // return priceBeforeDiscount - (priceBeforeDiscount * discountPercentage);
 }
 
 //  * Example:
