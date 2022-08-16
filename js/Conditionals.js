@@ -146,7 +146,7 @@ var luckyNumber = Math.floor(Math.random()*6);
 //  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
 //  * would like to enter a number. If they click 'Ok', prompt the user for a
 //  * number, then use 3 separate alerts to tell the user:
-//  *
+//
 //  * - whether the number is even or odd
 //  * - what the number plus 100 is
 //  * - if the number is negative or positive
@@ -261,7 +261,3 @@ function isEvenOrOdd(val) {
 //      }
 // }
 //
-// How to push?
-//     git add -A
-// git commit -m "Commit message"
-// git push origin main
