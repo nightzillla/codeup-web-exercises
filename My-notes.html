@@ -56,26 +56,76 @@
     }
     function isNotANumber(val){
         return typeof val !== "number";
+        //return (isNaN(val) || type of value === "boolean" || value === null);
     }
     function isNegative(value){
-        return value < 0
+        return value < 0;
     }
-    function isPositive(value) {
-        if (Math.sign(value) === 1) {
-            return true;
-        } else {
-            return false;
-        }
-        // function isPositive(value) { <-- shorter version
-        //     return value > 0;
-        // }
-    }function isArray(value){
+    // function isPositive(value) {
+    //     if (Math.sign(value) === 1) {
+    //         return true;
+    //     } else {
+    //         return false;
+    //     }
+
+    function isPositive(value) { //<-- shorter version
+        return value > 0;
+    }
+
+    function isArray(value) {
         return Array.isArray(value);
     }
+        function upperCase(value) {
+            if (isString(value)) {
+                return value.toUpperCase();
+            } else {
+                return false;
+            }
+    }
+    // function upperCase(value) {
+    //     if (typeof input === "string") {
+    //         return input.toUpperCase();
+    //     } else {
+    //         return false;
+    //     }
+    // }
+    // function upperCase(input)
+    // return typeof input === "string" ? input.toUpperCaseCase() : false;
 
-
-
-
+    function isTrue(value){
+        return value === true;
+    }
+    function isFalse(value){
+        return value === false;
+    }
+    function not(value){
+        return !value;
+    }
+    function addOne(value){
+        value = parseFloat(value);
+        return value + 1;
+    }
+    function isEven(value){
+        return value % 2 === 0;
+    }
+    function isIdentical(val1, val2){
+        return val1 === val2;
+    }
+    function isEqual(val1, val2){
+        return val1 == val2;
+    }
+    function or(val1, val2){
+        return val1 || val2;
+    }
+    function and(val1,val2){
+        return val1 && val2
+    }
+    function concat(val1, val2){
+        return val1.toString() + val2.toString();
+    }
+    function isBoolean(value) {
+        return typeof value === "boolean";
+    }
     // How to push?
     //     git add -A
     // git commit -m "Commit message"
@@ -139,7 +189,6 @@
     }
     function isFalse(value){
         return value === false;
-
     }
     function not(value){
         return !value;
@@ -150,15 +199,12 @@
     }
     function isEven(value){
         return value % 2 === 0;
-
     }
     function isIdentical(val1, val2){
         return val1 === val2;
-
     }
     function isEqual(val1, val2){
         return val1 == val2;
-
     }
     function or(val1, val2){
         return val1 || val2;
@@ -166,10 +212,8 @@
     function and(val1,val2){
         return val1 && val2
     }
-
     function concat(val1, val2){
         return val1.toString() + val2.toString();
-
     }
     function isBoolean(value) {
         return typeof value === "boolean";
