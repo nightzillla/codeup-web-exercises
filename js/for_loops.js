@@ -5,26 +5,27 @@
 //         console.log(`${value} x ${i} = ${result}`);
 //     }
 // }
-function showMultiplicationTable() {
-    let number = prompt("Enter a number");
-    for (let multiplier = 1; multiplier <= 10; multiplier++) {
-        console.log(`${number} x ${multiplier} = ${multiplier * number}`);
-    }
-}
-showMultiplicationTable();
+
+// function showMultiplicationTable() {
+//     let number = prompt("Enter a number");
+//     for (let multiplier = 1; multiplier <= 10; multiplier++) {
+//         console.log(`${number} x ${multiplier} = ${multiplier * number}`);
+//     }
+// }
+// showMultiplicationTable();
 //******************************************************************************************************************************************
 // 3.
 // asking 20 to 200 so sub to equal 180 + 1, +20 because it's small
 // console.log(random);
-for (let i = 0; i < 10; i++) {
-    let random;
-    random = Math.ceil(Math.random()*181 + 20);
-    if (random % 2 === 0) { // is even
-        console.log(`${random} is even!`);
-    } else {
-        console.log(`${random} is odd!`);
-    }
-}
+// for (let i = 0; i < 10; i++) {
+//     let random;
+//     random = Math.ceil(Math.random()*181 + 20);
+//     if (random % 2 === 0) { // is even
+//         console.log(`${random} is even!`);
+//     } else {
+//         console.log(`${random} is odd!`);
+//     }
+// }
 // //*****************************************************************************************************************************************
 // 4.
 //let n = 9; // height of pattern
@@ -60,13 +61,13 @@ for (let i = 100; i >= 5; i -=5){
 }
 //************************************************************************************************************************
 
-let string = "";
-for (let i =0; i < 8; i++){
-    let word  prompt("Let's make a sentence! Enter a word: ");
-    if ( word === "curses"){
-        console.log("That word is not allowed")
-        continue;
-    }
-    string += " " + word;
-    console.log("Your sentence is: " + string);
-}
+// let string = "";
+// for (let i =0; i < 8; i++){
+//     let word = prompt("Let's make a sentence! Enter a word: ");
+//     if ( word === "curses"){
+//         console.log("That word is not allowed")
+//         continue;
+//     }
+//     string += " " + word;
+//     console.log("Your sentence is: " + string);
+// }
