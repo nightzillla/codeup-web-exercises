@@ -28,18 +28,18 @@
 // }
 // //*****************************************************************************************************************************************
 // 4.
-//let n = 9; // height of pattern
-// let string = ""
-// for (let i = 1; i <= 10; i++) { //10 is the height
-//
-//     for (let j = 1; j <= i ; j++) {
-//         string += i;
-//     }
-//     string += "\n";
-//     }
-//     console.log(string);
+let n = 9; // height of pattern
+let string = ""
+for (let i = 1; i <= 10; i++) { //10 is the height
 
-// for (let i = 1; 1 <= 9; i++) {
+    for (let j = 1; j <= i ; j++) {
+        string += i;
+    }
+    string += "\n";
+    }
+    console.log(string);
+
+// for (let i = 1; 1 <= 9; i++) {8
 //     let outputString = "";
 //     for (let count = 0; count < i; count++) {
 //         outputString = outputString + 1;
