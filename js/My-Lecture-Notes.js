@@ -132,7 +132,12 @@ function upperCase(value) {
 // ARRAY LECTURE:
 // declaring an array literal
 // EACH ITEM in an array is called an ELEMENT
-
+// .push will add it to the end of the array
+// .unshift will add it to the beginning of the array
+// .shift will remove the first part of the array
+// .pop roves the last element from an array
+// .indexOf() will find the index of userInput
+// .reverse will reverse the order
 // EXAMPLES OF ARRAY
 
 let groceryList = ['bread', 'eggs', 'butter', 'milk']; // Looping Arrays
@@ -169,7 +174,7 @@ let groceryList = ['bread', 'eggs', 'butter', 'milk']; // Looping Arrays
 // The Third parameter represents the array itself
 // the second and third parameters are optional
 
-let prices = [32.99, 21.99, 6.99, 4.99, 12.99,8.98, 5.99]
+// let prices = [32.99, 21.99, 6.99, 4.99, 12.99,8.98, 5.99]
 // prices.forEach(function(price,index) {
 //     console.log("Item number " + index + " cost " + price);
 // });
@@ -177,56 +182,65 @@ let prices = [32.99, 21.99, 6.99, 4.99, 12.99,8.98, 5.99]
 // prices.forEach(prices => {       <---- // arrow function
 //     console.log(prices)
 // });
+//
+// groceryList.push("potatoes", "serranos");
+// console.log(groceryList);
+//
+// groceryList.pop(); // eliminate the last item
+// console.log(groceryList);
+//
+// groceryList.unshift("sliced cheddar"); // unshift will add to the beginning of array
+// console.log(groceryList);
+//
+// groceryList.shift();
+// console.log(groceryList);
+//
+// let indexOfButter = groceryList.indexOf("butter");
+// console.log(indexOfButter);
+//
+// groceryList[indexOfButter] = "peanut butter";
+// console.log(groceryList);
+//
+// let bread = groceryList[0];
+// groceryList[0] = "avocadoes";
+// console.log(groceryList);
+//
+// let firstHalfOfGroceryList = groceryList.slice(0,2);
+// console.log(firstHalfOfGroceryList);
+// let secondHalfOfGroceryLIst = groceryList.slice(2);
+// console.log(secondHalfOfGroceryLIst);
+//
+// firstHalfOfGroceryList.push("butter");
+//
+// groceryList = firstHalfOfGroceryList.concat(secondHalfOfGroceryLIst);
+// console.log(groceryList);
+//
+// groceryList.reverse();
+// console.log(groceryList);
+//
+// groceryList.sort();
+// console.log(groceryList);
+// console.log(groceryList.reverse());
+//
+// prices.sort(function(a,b){
+//     return a-b;
+// });
+// console.log(prices);
+//
+// groceryList[3] = "Blueberries";
+// console.log(groceryList);
+// console.log(groceryList.sort());
+//
+// groceryList.forEach((item, index, array) => {
+//     array[index] = item.toLowerCase();
+// })
+// console.log(groceryList);
 
-groceryList.push("potatoes", "serranos");
-console.log(groceryList);
-
-groceryList.pop(); // eliminate the last item
-console.log(groceryList);
-
-groceryList.unshift("sliced cheddar"); // unshift will add to the beginning of array
-console.log(groceryList);
-
-groceryList.shift();
-console.log(groceryList);
-
-let indexOfButter = groceryList.indexOf("butter");
-console.log(indexOfButter);
-
-groceryList[indexOfButter] = "peanut butter";
-console.log(groceryList);
-
-let bread = groceryList[0];
-groceryList[0] = "avocadoes";
-console.log(groceryList);
-
-let firstHalfOfGroceryList = groceryList.slice(0,2);
-console.log(firstHalfOfGroceryList);
-let secondHalfOfGroceryLIst = groceryList.slice(2);
-console.log(secondHalfOfGroceryLIst);
-
-firstHalfOfGroceryList.push("butter");
-
-groceryList = firstHalfOfGroceryList.concat(secondHalfOfGroceryLIst);
-console.log(groceryList);
-
-groceryList.reverse();
-console.log(groceryList);
-
-groceryList.sort();
-console.log(groceryList);
-console.log(groceryList.reverse());
-
-prices.sort(function(a,b){
-    return a-b;
-});
-console.log(prices);
-
-groceryList[3] = "Blueberries";
-console.log(groceryList);
-console.log(groceryList.sort());
-
-groceryList.forEach(item, index, array) => {
-    array[index] = item.toLowerCase();
-})
-console.log(groceryList);
+let quote = "All the world;s a play";
+quote = quote.toLowerCase();
+let quoteArray = quote.split(' ');
+console.log(quoteArray)
+quoteArray = quoteArray.reverse();
+console.log(quoteArray);
+quote = quoteArray.join(' ');
+console.log(quote);
