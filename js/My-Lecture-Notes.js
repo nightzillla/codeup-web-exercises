@@ -126,7 +126,27 @@ function upperCase(value) {
         return false;
     }
 }
-*/
+function isTypeMatch(val1, val2){
+    return (typeof val1 === typeof val2);
+
+}
+function isBoolean(value){
+   return typeof value === "boolean":
+}
+
+function calcCube(val) {
+    if (!isNaN(val) || typeof val === "number"){
+        return val ** 3;
+    } else {
+    return 0;}
+}
+
+
+
+
+
+
+ */
 //**********************************************************************************************************************
 
 // ARRAY LECTURE:
@@ -140,7 +160,7 @@ function upperCase(value) {
 // .reverse will reverse the order
 // EXAMPLES OF ARRAY
 
-let groceryList = ['bread', 'eggs', 'butter', 'milk']; // Looping Arrays
+// let groceryList = ['bread', 'eggs', 'butter', 'milk']; // Looping Arrays
 // for(let i =0; i < groceryList.length; i++) {
 //     if (i === groceryList.length - 1) {
 //         console.log("I have to buy " + groceryList[i] + ".");
@@ -236,11 +256,48 @@ let groceryList = ['bread', 'eggs', 'butter', 'milk']; // Looping Arrays
 // })
 // console.log(groceryList);
 
-let quote = "All the world;s a play";
-quote = quote.toLowerCase();
-let quoteArray = quote.split(' ');
-console.log(quoteArray)
-quoteArray = quoteArray.reverse();
-console.log(quoteArray);
-quote = quoteArray.join(' ');
-console.log(quote);
+// let quote = "All the world;s a play";
+// quote = quote.toLowerCase();
+// let quoteArray = quote.split(' ');
+// console.log(quoteArray)
+// quoteArray = quoteArray.reverse();
+// console.log(quoteArray);
+// quote = quoteArray.join(' ');
+// console.log(quote);
+
+let wishList = [25, 15, 34, 8, 59];
+
+function checkWishListPrices(wishList){
+    for (let i = 0; i < wishList.length; i++){
+        if (wishList[i] > 50){
+            return false;
+        }
+    }
+    return true;
+}
+
+console.log(checkWishListPrices(wishList));
+
+function checkWishListTotal(wishList){
+    let total = 0;
+    for (let i = 0; i < wishList.length; i++){
+    total += wishList[i];
+    }
+    return total <= 100;
+
+
+console.log(checkWishListTotal(wishList));
+
+function processWishList(wishList, testFunctional, testFunctional2){
+    return testFunctional(wishList) && testFunctional2(wishList);
+}
+
+console.log(processWishList(wishList, checkWishListPrices, checkWishListTotal));
+
+function zatannaMagic(string){
+    let commandArray = string.toLowerCase().split(" ");
+    for (let i = 0; i< commandArray.length; i++){
+        commandArray[i].split('').reverse().join('');
+    }
+    return commandArrayy.join(' ') + "!";
+}
