@@ -1,5 +1,5 @@
-(function() {
-     "use strict";
+// (function() {
+//      "use strict";
 
      /**
       * TODO:
@@ -11,15 +11,16 @@
       *  > console.log(person.firstName) // "Rick"
       *  > console.log(person.lastName) // "Sanchez"
       */
-     let name = {
-          firstName: "Danny",
-          lastName: "Nguyen",
-          sayHello: function (){
-               return "Hello from " + (name.firstName) + " " +  (name.lastName) + "!" ;
-          }
-     }
-          console.log(name.firstName);
-          console.log(name.lastName);
+
+     // let name = {
+     //      firstName: "Danny",
+     //      lastName: "Nguyen",
+     //      sayHello: function (){
+     //           return "Hello from " + (name.firstName) + " " +  (name.lastName) + "!" ;
+     //      }
+     // }
+     //      console.log(name.firstName);
+     //      console.log(name.lastName);
 
      /**
       * TODO:
@@ -30,8 +31,8 @@
       * Example
       * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
       */
-
-     console.log(name.sayHello());
+     //
+     // console.log(name.sayHello());
      /** TODO:
       * HEB has an offer for the shoppers that buy products amounting to
       * more than $200. If a shopper spends more than $200, they get a 12%
@@ -51,12 +52,8 @@
          {name: 'Ryan', amount: 250},
          {name: 'George', amount: 320}
      ];
-     for(let i = 0; i < shoppers.length; i++) {
-          if (shoppers[i].amount > 200) {
-               console.log(`Hello ${shoppers[i].name}, your subtotal of ${shoppers[i].amount} will be discounted by ${shoppers[i].amount * 0.12} making your final ${shoppers[i].amount * 0.88}. Thank you come again!`);}
-          else {
-               console.log(`Hello ${shoppers[i].name}, your final total is ${shoppers[i].amount}. Thank you coming again!`)
-          }
+    shoppers.forEach(shoppers =>
+    console.log(`For ${shoppers.name} the price before is ${shoppers.amount} and the price after the discount is ${shoppers.amount - shoppers.amount * .12}`));
 
           /** TODO:
            * Create an array of objects that represent books and store it in a
@@ -70,8 +67,29 @@
            * > console.log(books[0].author.firstName) // "Douglas"
            * > console.log(books[0].author.lastName) // "Adams"
            */
-          let books = ["Book of five rings", "Single on purpose", "Healing words", "Pillow Thoughts", "milk and honey"]
-          author
+          let books = [
+               {title: "Book of five rings", author: {firstName: "Miyamoto", lastName: "Musashi"}},
+               {title: "Single on purpose", author: {firstName: "John", lastName: "Kim"}},
+               {title: "Healing words", author: {firstName: "Alexandra", lastName: "Vasiliu"}},
+               {title: "Pillow Thoughts", author: {firstName: "Courtney", lastName: "Peppernell"}},
+               {title: "milk and honey", author: {firstName: "Rupi", lastName: "Kaur"}},
+          ]
+          // console.log(books[0].title)
+          // console.log(books[0].author.firstName)
+          // console.log(books[0].author.lastName)
+          // console.log(books[1].title)
+          // console.log(books[1].author.firstName)
+          // console.log(books[1].author.lastName)
+          // console.log(books[2].title)
+          // console.log(books[2].author.firstName)
+          // console.log(books[2].author.lastName)
+          // console.log(books[3].title)
+          // console.log(books[3].author.firstName)
+          // console.log(books[3].author.lastName)
+          // console.log(books[4].title)
+          // console.log(books[4].author.firstName)
+          // console.log(books[4].author.lastName)
+
           /**
 
            * TODO:
@@ -97,7 +115,9 @@
            *      ---
            *      ...
            */
-
+          for (let i = 0; i < books.length; i++) {
+               console.log(`Book ${i + 1}\n${books[i].title}\n${books[i].author.lastName} ${books[i].author.firstName} \n ---`);
+          }
           /**
            * Bonus:
            * - Create a function named `createBook` that accepts a title and author
@@ -108,5 +128,5 @@
            *   outputs the information described above. Refactor your loop to use your
            *   `showBookInfo` function.
            */
-
-     }})();
+     //
+     // }})();

@@ -264,40 +264,241 @@ function calcCube(val) {
 // console.log(quoteArray);
 // quote = quoteArray.join(' ');
 // console.log(quote);
+//
+// let wishList = [25, 15, 34, 8, 59];
+// function checkWishListPrices(wishList){
+//     for (let i = 0; i < wishList.length; i++){
+//         if (wishList[i] > 50){
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+// console.log(checkWishListPrices(wishList));
 
-let wishList = [25, 15, 34, 8, 59];
+// function checkWishListTotal(wishList){
+//     let total = 0;
+//     for (let i = 0; i < wishList.length; i++){
+//     total += wishList[i];
+//     }
+//     return total <= 100;
+//
+// console.log(checkWishListTotal(wishList));
 
-function checkWishListPrices(wishList){
-    for (let i = 0; i < wishList.length; i++){
-        if (wishList[i] > 50){
-            return false;
+// function processWishList(wishList, testFunctional, testFunctional2){
+//     return testFunctional(wishList) && testFunctional2(wishList);
+// }
+//
+// console.log(processWishList(wishList, checkWishListPrices, checkWishListTotal));
+//
+// function zatannaMagic(string){
+//     let commandArray = string.toLowerCase().split(" ");
+//     for (let i = 0; i< commandArray.length; i++){
+//         commandArray[i].split('').reverse().join('');
+//     }
+//     return commandArrayy.join(' ') + "!";
+// }
+
+//**********************************************************************************************************************
+
+// OBJECT LECTURE
+// let currentWeather = {
+//     humidity: 77,
+//     temp: 82.33,
+//     feels_like: 88.79,
+//     clouds: 75,
+//     description: "cloudy"
+// }
+// console.log(currentWeather.temp);
+// console.log(currentWeather.feels_like);
+// console.log(currentWeather.description);
+// console.log(currentWeather["humidity"]);
+// let userChoice = "clouds";
+// console.log(currentWeather[userChoice]);
+// userChoice = "temp";
+// console.log(currentWeather[userChoice]);
+
+// You can do anything to an object property that you can do to any other variable
+// console.log("The current weather is " + currentWeather.temp);
+// if (currentWeather.temp > 95){
+//     console.log("It;s kinda of hot");
+// } else {
+//     console.log("It's cool today for Texas");
+// }
+
+// loop through an array using for in loop
+// for (let property in currentWeather) {
+//     console.log(property + " " + currentWeather[property]);
+// }
+
+// Dynamically add new properties to existing objects
+// currentWeather.uvIdex = 9.79;
+// console.log(currentWeather.uvIdex);
+
+// ARRAY OF OBJECTS
+
+let hourlyWeather = [
+    {
+        time: "08:00",
+        temperature: 78.91,
+        feels_like: 78.91
+    },
+    {
+        time: "09:00",
+        temperature: 79.57,
+        feels_like: 79.57
+    },
+    {
+        time: "10:00",
+        temperature: 81.46,
+        feels_like: 86.04
+    },
+    {
+        time: "11:00",
+        temperature: 84.49,
+        feels_like: 89.24
+    }
+];
+
+// Loop over an array of objects
+// Using for loop
+// for(let i = 0; i < hourlyWeather.length; i++){
+//     console.log(`At ${hourlyWeather[i].time} the temperature will be ${hourlyWeather[i].temperature}`)
+// }
+// for each loop needs instructions, needs function
+// element,index,
+
+// Use forEach loop
+hourlyWeather.forEach(function(forecast) {
+        console.log(`At ${forecast.time} the temperature will be ${forecast.temperature} and feels like ${forecast.feels_like}`);
+    });
+
+// hourlyWeather.forEach(forecast => console.log(`At ${forecast.time} the temperature will be ${forecast.temperature} and feels like ${forecast.feels_like}`)
+
+// let texasInfo = [
+//     {
+//         city: "San Antonio",
+//         latitude: 29.423017,
+//         longitude: -98.48527,
+//         timezone: "America/Chicago",
+//         currentWeather: {
+//             humidity: 77,
+//             temp: 82.33,
+//             feels_like: 88.79,
+//             clouds: 75
+//         }
+//     },
+//     {
+//         city: "Houston",
+//         latitude: 29.7915,
+//         longitude: -95.093,
+//         timezone: "America/Chicago",
+//         currentWeather: {
+//             humidity: 68,
+//             temp: 87.44,
+//             feels_like: 97.7,
+//             clouds: 75
+//         }
+//     }
+// ];
+//
+// console.log("The temperature in " + texasInfo[1].city + " is " + texasInfo[1].currentWeather.temp);
+
+
+let fighter = {
+    name: "Arata",
+    hitPoints: 18,
+    maxDamage: 8,
+    attack: function (opponent) {
+        console.log(`${opponent.name} has ${opponent.hitPoints} hit points`);
+        console.log(this.name + " attacks!");
+        let damage = Math.ceil(Math.random() * this.maxDamage);
+        console.log(`${this.name} does ${damage} points of damage!`);
+        opponent.hitPoints -= damage;
+        console.log(`${opponent.name} now has ${opponent.hitPoints} hit points`);
+    }
+}
+
+let monster = {
+        name: "Goblin",
+        hitPoints: 8,
+        maxDamage: 6,
+        console.log(this.name + " attacks!");
+            // method def
         }
     }
-    return true;
-}
 
-console.log(checkWishListPrices(wishList));
+// Let's create a controller object to handle anything players or game objects do that affects the state of the game. The controller might handle taking user input an d calculating the input's effect on the game.
 
-function checkWishListTotal(wishList){
-    let total = 0;
-    for (let i = 0; i < wishList.length; i++){
-    total += wishList[i];
+let controller = {
+    attack: function (attacker, defender) {
+        let damage = Math.ceil(Math.random() * attacker.maxDamage);
+        console.log(`${attacker.name} does ${damage} hit points of damage!`);
+        defender.hitPoints -= damage;
+        view.displayAttackResults(attacker, defender, defenderHPBeforeAttack, damage);
     }
-    return total <= 100;
-
-
-console.log(checkWishListTotal(wishList));
-
-function processWishList(wishList, testFunctional, testFunctional2){
-    return testFunctional(wishList) && testFunctional2(wishList);
 }
 
-console.log(processWishList(wishList, checkWishListPrices, checkWishListTotal));
-
-function zatannaMagic(string){
-    let commandArray = string.toLowerCase().split(" ");
-    for (let i = 0; i< commandArray.length; i++){
-        commandArray[i].split('').reverse().join('');
+let view = {
+    displayAttackResults: function (attacker, defender, defenderHPBeforeAttack, damage){
+        console.log(`${defender.name} has ${defenderHPBeforeAttack} hit points`);
+        console.log(attacker.name + " attacks!");
+        console.log(`${attacker.name} does ${damage} hit points of damage!`);
+        console.log(`${defender.name} now has ${defender.hitPoints} hit points`);
+        console.log("------------------------");
     }
-    return commandArrayy.join(' ') + "!";
 }
+let model = {
+    fighter: {
+        name: "Arata",
+        hitPoints: 18,
+        maxDamage: 8,
+    }
+}
+        monster = {
+        name: "Goblin",
+        hitPoints: 8,
+        maxDamage: 6,
+    }
+
+// controller.attack(model.fighter,model.monster);
+// controller.attack(model.monster, model.fighter);
+
+// Creating objects
+// define an empty object and creat properties dynamically
+let goblin = {};
+goblin.name = "Goblin";
+
+// create a function that returns objects
+
+function makeMonster(name, hitPoints, maxDamage){
+    return {
+        name: name, // property def : value
+        hitPoints: hitPoints,
+        maxDamage: maxDamage,
+    }
+}
+// model.hobgoblin = makeMonster("Hobgoblin", 11, 11);
+// controller.attack(model.hobgoblin, model.fighter);
+
+// use an object constructor
+
+function Monster(name, hitPoints, maxDamage){
+    this.name = name;
+    this.hitPoints = hitPoints;
+    this.maxDamage = maxDamage;
+}
+
+model.hobgoblinCaptin = new Monster("Hobgoblin Captain", 39, 14);
+
+controller.attack(model.hobgoblinCaptin, model.fighter);
+
+for (let property in model){
+    console.log(model[property].name);
+}
+
+/*
+
+
+*/
+
