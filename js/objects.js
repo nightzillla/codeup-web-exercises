@@ -47,13 +47,13 @@
       * and console.log the relevant messages for each person
       */
 
-     let shoppers = [
-         {name: 'Cameron', amount: 180},
-         {name: 'Ryan', amount: 250},
-         {name: 'George', amount: 320}
-     ];
-    shoppers.forEach(shoppers =>
-    console.log(`For ${shoppers.name} the price before is ${shoppers.amount} and the price after the discount is ${shoppers.amount - shoppers.amount * .12}`));
+    //  let shoppers = [
+    //      {name: 'Cameron', amount: 180},
+    //      {name: 'Ryan', amount: 250},
+    //      {name: 'George', amount: 320}
+    //  ];
+    // shoppers.forEach(shoppers =>
+    // console.log(`For ${shoppers.name} the price before is ${shoppers.amount} and the price after the discount is ${shoppers.amount - shoppers.amount * .12}`));
 
           /** TODO:
            * Create an array of objects that represent books and store it in a
@@ -74,59 +74,60 @@
                {title: "Pillow Thoughts", author: {firstName: "Courtney", lastName: "Peppernell"}},
                {title: "milk and honey", author: {firstName: "Rupi", lastName: "Kaur"}},
           ]
-          // console.log(books[0].title)
-          // console.log(books[0].author.firstName)
-          // console.log(books[0].author.lastName)
-          // console.log(books[1].title)
-          // console.log(books[1].author.firstName)
-          // console.log(books[1].author.lastName)
-          // console.log(books[2].title)
-          // console.log(books[2].author.firstName)
-          // console.log(books[2].author.lastName)
-          // console.log(books[3].title)
-          // console.log(books[3].author.firstName)
-          // console.log(books[3].author.lastName)
-          // console.log(books[4].title)
-          // console.log(books[4].author.firstName)
-          // console.log(books[4].author.lastName)
+            // books.forEach(function (fiveBooks) {
+            //     console.log(`The ${fiveBooks.title} is by ${fiveBooks.author.firstName} ${fiveBooks.author.lastName}`)});
+                // console.log(books[0].title)
+                // console.log(books[0].author.firstName)
+                // console.log(books[0].author.lastName))
+                // console.log(books[1].title)
+                // console.log(books[1].author.firstName)
+                // console.log(books[1].author.lastName)
+                // console.log(books[2].title)
+                // console.log(books[2].author.firstName)
+                // console.log(books[2].author.lastName)
+                // console.log(books[3].title)
+                // console.log(books[3].author.firstName)
+                // console.log(books[3].author.lastName)
+                // console.log(books[4].title)
+                // console.log(books[4].author.firstName)
+                // console.log(books[4].author.lastName)
 
-          /**
+                /**
 
-           * TODO:
-           * Loop through the books array and output the following information about
-           * each book:
-           * - the book number (use the index of the book in the array)
-           * - the book title
-           * - author's full name (first name + last name)
-           *
-           * Example Console Output:
-           *
-           *      Book # 1
-           *      Title: The Salmon of Doubt
-           *      Author: Douglas Adams
-           *      ---
-           *      Book # 2
-           *      Title: Walkaway
-           *      Author: Cory Doctorow
-           *      ---
-           *      Book # 3
-           *      Title: A Brief History of Time
-           *      Author: Stephen Hawking
-           *      ---
-           *      ...
-           */
-          for (let i = 0; i < books.length; i++) {
-               console.log(`Book ${i + 1}\n${books[i].title}\n${books[i].author.lastName} ${books[i].author.firstName} \n ---`);
-          }
-          /**
-           * Bonus:
-           * - Create a function named `createBook` that accepts a title and author
-           *   name and returns a book object with the properties described
-           *   previously. Refactor your code that creates the books array to instead
-           *   use your function.
-           * - Create a function named `showBookInfo` that accepts a book object and
-           *   outputs the information described above. Refactor your loop to use your
-           *   `showBookInfo` function.
-           */
-     //
+                 * TODO:
+                 * Loop through the books array and output the following information about
+                 * each book:
+                 * - the book number (use the index of the book in the array)
+                 * - the book title
+                 * - author's full name (first name + last name)
+                 *
+                 * Example Console Output:
+                 *
+                 *      Book # 1
+                 *      Title: The Salmon of Doubt
+                 *      Author: Douglas Adams
+                 *      ---
+                 *      Book # 2
+                 *      Title: Walkaway
+                 *      Author: Cory Doctorow
+                 *      ---
+                 *      Book # 3
+                 *      Title: A Brief History of Time
+                 *      Author: Stephen Hawking
+                 *      ---
+                 *      ...
+                 */
+                books.forEach(function(fiveBooks,number){
+                    console.log(`Book # ${number} \nTitle: ${fiveBooks.title}\nAuthor: ${fiveBooks.author.lastName} ${fiveBooks.author.firstName}`)
+                });
+     //       * Bonus:
+     //       * - Create a function named `createBook` that accepts a title and author
+     //       *   name and returns a book object with the properties described
+     //       *   previously. Refactor your code that creates the books array to instead
+     //       *   use your function.
+     //       * - Create a function named `showBookInfo` that accepts a book object and
+     //       *   outputs the information described above. Refactor your loop to use your
+     //       *   `showBookInfo` function.
+     //       */
+     // //
      // }})();
