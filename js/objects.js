@@ -47,11 +47,16 @@
       * and console.log the relevant messages for each person
       */
 
-    //  let shoppers = [
-    //      {name: 'Cameron', amount: 180},
-    //      {name: 'Ryan', amount: 250},
-    //      {name: 'George', amount: 320}
-    //  ];
+     let shoppers = [
+         {name: 'Cameron', amount: 180},
+         {name: 'Ryan', amount: 250},
+         {name: 'George', amount: 320}
+     ];
+     shoppers.forEach(function(shoppers){
+         let discount = (shoppers.amount > 200 ? shoppers.amount * .12 : 0).toFixed(2);
+         let total = (shoppers.amount - discount).toFixed(2);
+         console.log(`${shoppers.name} -- total: $${shoppers.amount}, discount: $${discount}, final amount $${total}`);
+     });
     // shoppers.forEach(shoppers =>
     // console.log(`For ${shoppers.name} the price before is ${shoppers.amount} and the price after the discount is ${shoppers.amount - shoppers.amount * .12}`));
 
@@ -76,6 +81,7 @@
           ]
             // books.forEach(function (fiveBooks) {
             //     console.log(`The ${fiveBooks.title} is by ${fiveBooks.author.firstName} ${fiveBooks.author.lastName}`)});
+
                 // console.log(books[0].title)
                 // console.log(books[0].author.firstName)
                 // console.log(books[0].author.lastName))
@@ -118,7 +124,7 @@
                  *      ...
                  */
                 books.forEach(function(fiveBooks,number){
-                    console.log(`Book # ${number} \nTitle: ${fiveBooks.title}\nAuthor: ${fiveBooks.author.lastName} ${fiveBooks.author.firstName}`)
+                    console.log(`Book # ${number + 1} \nTitle: ${fiveBooks.title}\nAuthor: ${fiveBooks.author.lastName} ${fiveBooks.author.firstName} \n---`)
                 });
      //       * Bonus:
      //       * - Create a function named `createBook` that accepts a title and author
@@ -129,5 +135,40 @@
      //       *   outputs the information described above. Refactor your loop to use your
      //       *   `showBookInfo` function.
      //       */
-     // //
+
+                function createBook(title, firstName, lastName){
+                    return {
+                        title: title,
+                        author: {
+                            firstName: firstName,
+                            lastName: lastName
+                        }
+                    }
+                }
+                books.push(createBook("The Great Gatsby", "F. Scott", "Fitzgerald"));
+                function Book(title, firstName, lastName){
+                    this.title = title;
+                    this.author = {
+                        firstName: firstName,
+                        lastName: lastName
+                    }
+                }
+                function showBookInfo(book){
+                    console.log("Title: " + book.title);
+                    console.log(`Author: ${book.author.firstName} ${book.author.lastName}`);
+                    console.log("---");
+                }
+
+                books.forEach(function (book, index) {
+                    showBookInfo(book, index);
+                });
+                // let nineteenEightyFour = new Book("1984","George", "Orwell");
+                // books.push(nineteenEightyFour);
+                // books.forEach(function (book, index){
+                //     console.log("Book # " + (index + 1));
+                //     showBookInfo(book);
+                //
+});
+
+//
      // }})();
