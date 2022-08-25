@@ -4,13 +4,15 @@ Important NOTES:
 i++ / means increment of 1 example: 1 increment 1 = 2 increment 1 = 3
 i-- //decrement of 1
 "typeof" tells you what the type of userInput is example: userInput 3 = 'number || userInput "3" = string
+Math.max(23, 56, 89) picks the highest number
+Math.min(16, 12) picks the smallest number
 
+ */
 //**********************************************************************************************************************
 // use this to make sure something is a number
 const hack = function(val){
     return (!isNaN(parseFloat(val)));
 }
-*/
 
 //**********************************************************************************************************************
 
@@ -39,10 +41,12 @@ calculateCircumference();
 
 //**********************************************************************************************************************
 
+function isNumber(value){
+    return !(isNaN(value) || typeof value === "boolean" || value === null);
+}
 function isGreaterThan(val1,val2) {
     return (val1 > val2);
 }
-
 function isGreaterThan(arg1, arg2){
     if(typeof arg1 !== "number" || typeof arg2 !== "number"){
         return false;
@@ -50,7 +54,6 @@ function isGreaterThan(arg1, arg2){
         return false;
     } else {return true;}
 }
-
 function isLessThan(val1, val2) {
     if (typeof val1 !== "number" || typeof val2 !== "number") {
         return false;
@@ -208,9 +211,17 @@ function isFactor (number1, number2){
         return false;
     }
 }
-
+function multiply(value1,value2) {
+    if (isANumber(parseFloat(value1)) || isNaN(parseFloat(value2))) {
+        return false;
+    } else {
+        return parseFloat(value1) * parseFloat(value2);
+    }
+}
  */
-//*****************************************************************************************************************************
+
+//**********************************************************************************************************************
+
 
 // ARRAY LECTURE:
 // declaring an array literal
