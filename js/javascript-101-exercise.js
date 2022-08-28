@@ -9,7 +9,8 @@
 //     ["eggplant", "broccoli", "carrot", "cauliflower", "zucchini", "tomato"],
 // );
 // *********************************************************************************************************************
-// Writing functions
+// Writing functions notes
+//  % 2 === 0; means to see if theres any remainder
 // *********************************************************************************************************************
 // This function generates a random number that is both POSITIVE and EVEN.
 // function randomPositiveEvenNumber() {
@@ -22,7 +23,7 @@
 // *********************************************************************************************************************
 // This function generates a random number that is both POSITIVE and ODD.
 // function randomPositiveOddNumber() {
-//     let randomNumber = Math.ceild(Math.random() * 100) + 10;
+//     let randomNumber = Math.ceil(Math.random() * 100) + 10;
 //     if (randomNumber % 2 === 0) {
 //         return randomPositiveOddNumber()
 //     }
@@ -155,20 +156,119 @@
 // }
 // *********************************************************************************************************************
 // Function named reverseSign that takes in a number and returns the provided number but with the sign reversed.
-function reverseSign(i) {
-    if (i > 0) {
-        return i * -1;
-    } else {
-        return i * -1;
-    }
-}
+// function reverseSign(i) {
+//     if (i > 0) {
+//         return i * -1;
+//     } else {
+//         return i * -1;
+//     }
+// }
 // *********************************************************************************************************************
+// Function named absoluteValue that takes in a number and returns the absolute value of the provided number
+// function absoluteValue(i) {
+//     return Math.abs(i);
+// }
+// *********************************************************************************************************************
+// Function named isMultipleOfThree that takes in a number and returns true or false if the number is evenly divisible by 3.
+// function isMultipleOfThree (i) {
+//     if (i % 3 === 0) {
+//         return true;
+//     }
+//     return false;
+// }
+//*********************************************************************************************************************
+// Function named isMultipleOfFive that takes in a number and returns true or false if the number is evenly divisible by 5
+// function isMultipleOfFive(i){
+//     if (i % 5 === 0) {
+//         return true;
+//     }
+//     return false;
+// }
+//*********************************************************************************************************************
+// Function named isMultipleOfBothThreeAndFive that takes in a number and returns true or false if the number is evenly divisible by both 3 and 5.
+// function ifMultipleOfBothThreeAndFive (i) {
+//     if (i % 3 === 0 && i % 5 === 0) {
+//         return true;
+//     }
+//     return false;
+// }
+//*********************************************************************************************************************
+// Function named square that takes in a number and returns the number times itself.
+// function square(i) {
+//     return i * i;
+// }
+//*********************************************************************************************************************
+// Function named add that takes in two numbers and returns the sum.
+// function add(a,b) {
+//     return a + b;
+// }
+//*********************************************************************************************************************
+// Function named cube that's in a number and returns the number times itself, times itself.
+// function cube(i) {
+//     return i ** 3;
+// }
+//*********************************************************************************************************************
+// Function named squareRoot that takes in a number and returns the square root of the provided number
+// function squareRoot(i){
+//     return Math.sqrt(i);
+// }
+//*********************************************************************************************************************
+// Function named subtract that takes in two numbers and returns the first minus the second argument.
+// function subtract(a,b) {
+//     return a - b;
+// }
+//*********************************************************************************************************************
+// Function named multiply that takes in two numbers and returns the first time the second argument.
+// function multiply(a, b ) {
+//     return a * b;
+// }
+//*********************************************************************************************************************
+// Function named divide that takes in two numbers and returns the first argument divided by the second argument.
+// function divide(a, b){
+//     return a/ b;
+// }
+//*********************************************************************************************************************
+// Function named quotient that takes in two numbers and returns the quotient of dividing the first argument by the second argument.
+// function quotient(a, b){
+//     return parseInt( a / b);
+// }
+//*********************************************************************************************************************
+// Function remainder that takes in two numbers and returns the remainder of first argument divided by the second argument.
+// function remainder(a, b) {
+//     return a % b;
+// }
+//*********************************************************************************************************************
 // Write a function definition named sumOfSquares that takes in two numbers, squares each number, then returns the sum of both squares.
 // function sumOfSquares(a,b){
 //     return ((a*a)+(b*b));
 // }
 // *********************************************************************************************************************
-// Write a function definition named remainder that takes in two numbers and returns
+// Write a function named timesTwoPlusThree that takes in a number, multiplies it by two, and 3 and returns the result.
+// function timesTwoPlusThree(i) {
+//     return i * 2 + 3;
+// }
+// *********************************************************************************************************************
+// Write a function named areaOfRectangle that takes in two numbers and returns the product.
+// function areaOfRectangle(a, b) {
+//     return a * b;
+// }
+// *********************************************************************************************************************
+// Write a function named areaOfCircle that takes in a number representing a circle's radius and returns the area of the circle.
+// function areaOfCircle (i) {
+//     return Math.PI * Math.pow(i, 2);
+// }
+// *********************************************************************************************************************
+// Function where it returns true if the input is one OR two.
+// function isOneOrTwo(x) {
+//     return x == 1 || x == 2;
+// }
+// *********************************************************************************************************************
+// Function where the input is one or 3 possibilities.
+// function isOneOrTwoOrThree(x) {
+//     return x == 1 || x == 2 || x == 3
+// }
+// *********************************************************************************************************************
+
 
 
 
