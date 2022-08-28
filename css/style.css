@@ -19,13 +19,13 @@ em {
 }
 
 @font-face {
-    src: url("/fonts/Silkscreen-Regular.ttf");
-    font-family: "Silkscreen", cursive;
+    src: url("/fonts/Minecraft.ttf");
+    font-family: "Minecraft", cursive;
     font-style: normal;
     font-weight: 400;
 }
 p,h1,h2,h3,ul,ol,tr,td,far,a{
-    font-family: "Silkscreen", cursive;
+    font-family: "Minecraft", inherit;
     font-weight: 400;
 }
 
