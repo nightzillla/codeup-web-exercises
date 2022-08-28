@@ -19,13 +19,13 @@ em {
 }
 
 @font-face {
-    src: url("/fonts/Minecraft.ttf");
-    font-family: "Minecraft", cursive;
+    src: url("/fonts/Silkscreen-Regular.ttf");
+    font-family: "CustomFont";
     font-style: normal;
     font-weight: 400;
 }
 p,h1,h2,h3,ul,ol,tr,td,far,a{
-    font-family: "Minecraft", inherit;
+    font-family: "CustomFont", Arial, sans-serif;
     font-weight: 400;
 }
 
@@ -38,4 +38,30 @@ body{
 
 p, h1,h2,h3,ol,tr,td,far,a,ol,li{
 color:white;
+}
+
+ul.a {
+    list-style-type: circle;
+}
+ol.b {
+    list-style-type: upper-roman;
+}
+ul.c {
+    list-style-type: square;
+}
+
+a:link {
+    color:red;
+}
+
+a:visited {
+    color:black;
+}
+
+a:hover {
+    color:blue;
+}
+
+a:active {
+    color:green;
 }
