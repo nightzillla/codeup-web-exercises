@@ -19,5 +19,17 @@ em {
 }
 
 @font-face {
-    src: url(font/Silkscrreen);
+    src: url("/font/Silkscreen-Regular.ttf");
+    font-family: "Silkscreen", cursive;
+    font-style: normal;
+    font-weight: 100;
+}
+p,h1,h2,h3,ul,ol,tr,td,far,a{
+    font-family: "Silkscreen", cursive;
+    font-weight: 100;
+}
+
+body{
+    background-image: url("/img/");
+    background-color: burlywood;
 }
