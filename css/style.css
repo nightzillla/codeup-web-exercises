@@ -30,6 +30,8 @@ p,h1,h2,h3,ul,ol,tr,td,far,a{
 }
 
 body{
-    background-image: url("/img/");
+    background-image: url("/img/wp4676582.webp.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-color: burlywood;
 }
