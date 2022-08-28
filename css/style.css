@@ -1,4 +1,23 @@
 .fancy-header {
-    color: purple;
+    /*color: purple;*/
     text-decoration: underline;
+}
+
+#container {
+margin: 50px auto;
+width: 500px;
+padding: 10px;
+}
+
+h1.fancy-header{
+    color: blue;
+    text-decoration: underline;
+}
+
+em {
+    font-weight: bold;
+}
+
+@font-face {
+    src: url(font/Silkscrreen);
 }
