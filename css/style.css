@@ -19,19 +19,23 @@ em {
 }
 
 @font-face {
-    src: url("/font/Silkscreen-Regular.ttf");
+    src: url("/fonts/Silkscreen-Regular.ttf");
     font-family: "Silkscreen", cursive;
     font-style: normal;
-    font-weight: 100;
+    font-weight: 400;
 }
 p,h1,h2,h3,ul,ol,tr,td,far,a{
     font-family: "Silkscreen", cursive;
-    font-weight: 100;
+    font-weight: 400;
 }
 
 body{
-    background-image: url("/img/wp4676582.webp.jpg");
+    background-image: url("/img/wp4676582.jpeg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-color: burlywood;
+    background-color: blue;
+}
+
+p, h1,h2,h3,ol,tr,td,far,a,ol,li{
+color:white;
 }
