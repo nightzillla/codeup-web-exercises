@@ -1,5 +1,4 @@
 //Array exercise and functions
-
 // Add the string "tomato" onto the end of the vegetables array.
 // *use .push
 // vegetables.push('tomato')
@@ -8,6 +7,93 @@
 //     vegetables,
 //     ["eggplant", "broccoli", "carrot", "cauliflower", "zucchini", "tomato"],
 // );
+// *********************************************************************************************************************
+// Write a function that accepts an array of numbers and returns it average.
+// Bonus: if there are any non-numic values in the array, return false; Numeric strings should count as numeric values.
+// function isNumber(value){
+//     return !(isNaN(value) || typeof value === "boolean" || value === null)
+// }
+//
+//
+// let array = [5, 10, 15];
+// let array2 = [-25,-22,258, 68];
+// let array3 = ["notANumber", 25, 78];
+//
+// function arrayAverage(array){
+//     let total = 0;
+//     array.forEach(number => {total += number});
+//     return total/array.length;
+// }
+//
+// function arrayAverage(array){
+//     if( array === undefined){
+//         return false;
+//     }
+//     let total = 0;
+//     for (let i = 0; i < array.length; i++) {
+//         if (!isNumber(array[i])){
+//             return false;
+//         }
+//         total += array[i];
+//     }
+//     return total/array.length;
+// }
+// *********************************************************************************************************************
+// Write a function that accepts an array of strings and returns the longest string. If there are two strings of equal length it returns the one with the lowest index.
+// Bonus: if there are any values that are not strings, return false;
+// let stringArray = ["Jabba", "Darth Maul", "Hondo", "buzzworthy"];
+// function longestString(arrayOfStrings){
+//     let longest = '';
+//     for (let i =0; i < arrayOfStrings.length; i++){
+//         if (arrayOfStrings[i].length > longest.length){ //longest = arrayOfStrings[i];
+//             longest = arrayOfStrings[i];
+//         }
+//     }
+//     return longest;
+// }
+// *********************************************************************************************************************
+//  Write a function, calculateTotalStudents, that returns the total number of students recorded in the classes array.
+// let classes = [
+//     {class: "6th grade history", students: 18},
+//     {class: "7th grade history", students: 20},
+//     {class: "8th grade history", students: 22}
+// ];
+// function calculateTotalStudents(s) {
+//     let total = 0;
+//     for (let i = 0; i < s.length; i++) {
+//         total += s[i].students
+//     }
+//     return total;
+// }
+
+// *********************************************************************************************************************
+// Write a function that calculates the sum of the elements of an array.
+// let numberArray = [8, 10, 20]
+// function arraySum(array){
+//     let total = 0;
+//     for (let i = 0; i <array.length; i++) {
+//         total += array[i];
+//     }
+//     return total;
+// }
+//
+// console.log(arraySum(numberArray));
+// *********************************************************************************************************************
+// Let's pretend your company just hired your friend from college and paid you a referral bonus. Awesome! To celebrate, you're taking your team out to the terrible dive bar next door and using the referral bonus to buy, and build, the largest three-dimensional beer can pyramid you can. And then probably drink those beers, because let's pretend it's Friday too.
+//
+// A beer can pyramid will square the number of cans in each level - 1 can in the top level, 4 in the second, 9 in the next, 16, 25...
+//
+// Complete the beeramid function to return the number of complete levels of a beer can pyramid you can make, given the parameters of:
+//
+//     your referral bonus, and
+//
+//     the price of a beer can
+//
+// For example:
+//
+// beeramid(1500, 2); // should === 12
+// beeramid(5000, 3); // should === 16
+
 // *********************************************************************************************************************
 // Writing functions notes
 //  % 2 === 0; means to see if theres any remainder
