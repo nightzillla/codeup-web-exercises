@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Testing px, rem, em</title>
 </head>
 <body>
-$END$
+<link rel="stylesheet" href="css/presentation.css">
+<h1>What is the difference between using pixels, ems, and rems? </h1>
+<p class="a">Testing pixels</p>
+<p class="b">Testing Em </p>
+<p class="b">1em = 16px ( 1 * 16)</p>
+<p class="b">2em = 32px (2 * 16)</p>
+<p class="b">.5em = 8px (.5 * 16)</p>
+<p class="c">Testing REM</p>
+<p class="c">1rem = 16px ( 1 * 16)</p>
+<p class="c">2rem = 32px (2 * 16)</p>
+<p class="c">.5rem = 8px (.5 * 16)</p>
 </body>
 </html>
+
+<!--Root element (rem) are responsive units interpreted into equivalent pxunit by the browser.The computed pixel value of emunit is relative to the font size of the element being styled. This is also affected by inherited values from the parent elements unless it is explicitly overridden by a pxunit which is not subject to inheritance.-->

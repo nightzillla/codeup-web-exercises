@@ -11,7 +11,6 @@ p.a {
     border-color: silver;
     box-shadow: 1px 1px;
     border-radius: 5px;
-    width: 95%;
     margin-left: 10px;
     margin-right: 10px;
     font-weight: bold;
@@ -31,7 +30,7 @@ p.b {
 }
 p.c {
     padding: .5em 1em;
-    background-color: #fafa99;
+    background-color: #fdfbce;
     border-color: silver;
     box-shadow: 1px 1px;
     border-radius: 5px;
@@ -42,14 +41,14 @@ p.c {
 }
 p.d {
     padding: .5em 1em;
-    background-color: #e7a8a8;
+    background-color: #f5d4d7;
     border-color: silver;
     border-radius: 5px;
     box-shadow: 1px 1px;
     margin-left: 10px;
     margin-right: 10px;
     font-weight: bold;
-    color: #c05454;;
+    color: #863846;;
 }
 
 /*#content {*/

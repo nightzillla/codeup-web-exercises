@@ -1,0 +1,25 @@
+/*What is the difference between using pixels, ems, and rems?*/
+h1 {
+    font-size: 2rem;
+}
+p.a { /* Pixel (px) is a commonly used CSS unit on websites and it is not scalable. Pixel are fixed measurement and does NOT rely on teh size of another element. 16px = 16px */
+    font-size: 32px;
+}
+p.b { /* Em stands for element. And the difference between the pixel is how the values are derived by the browser. Em are relative unit meaning they changed to parent element.*/
+    font-size: 2em;
+}
+p.c { /* REMs stands for Root Element. they are a way of setting font-sizes based on the font-size of the root HTML element. They also allow you to quickly scale an entire project by changing the root font-size (for example at a certain media query/screen size). */
+    font-size: 2rem;
+}
+
+/* Root element (rem) are responsive units interpreted into equivalent pxunit by the browser.The computed pixel value of emunit is relative to the font size of the element being styled. This is also affected by inherited values from the parent elements unless it is explicitly overridden by a pxunit which is not subject to inheritance.*/
+
+/*
+Border width(px)
+icon zie (em) when inline with text
+margin for typography (rem)
+padding for typography (em)
+font zie (em)
+root font size (px)
+line height (em or rem)
+ */

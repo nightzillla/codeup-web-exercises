@@ -5,5 +5,21 @@ margin - is how far you are from the wall.
 border-radius - makes your corner rounds.
 
 
+<style>
+body  { <-- this is called a selector
+declaration inside the curly = has a property and value
+}
+</style>
+
+h1 {
+      font-family: sans-serif;
+}
+
+-id can only be in one
+-class can have many.
+
+.bold / the dot will select all that is bold.
+
+fonts use rem.
 
  */
