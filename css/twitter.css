@@ -25,10 +25,11 @@ header {
 a {
     color: var(--link-color);/* default */
 }
-.top-nav {
+.top-nav { /* Home, Moments, Notification, Message */
     background: var(--light-bg); /* default */
     width: 100%;
     position: fixed;
+    z-index: 1000;
 }
 .nav {
     list-style-type: none;
@@ -47,9 +48,39 @@ a {
 .nav-link:hover {
     color: var(--link-color);/* default */
 }
+.container {
+    display: flex;
+    margin: 2em;
+}
 .profile {
     background: var(--light-bg);/* default */
+    height: 80px;
 }
+.profile-image { /* main profile icon */
+    position: absolute;
+    top: 240px;
+}
+.profile-form { /* EDIT BUTTON */
+    float: right;
+    line-height: 80px;
+
+}
+.profile-details { /* Elliot Alderson */
+    float: left;
+    margin: 0 .5em;
+    width: calc(25% - .5em);
+}
+.timeline { /* Middle Icons */
+    float:left;
+    margin: 0 .5em;
+    width: calc(50% - .5em);
+}
+.who-to-follow { /* Last Icons */
+    float: right;
+    margin: 0 .5em;
+    width: calc(25% - .5em);
+}
+
 .btn {
     border: 1px solid var(--main-link-color);
     color: var(--main-link-color);
@@ -71,4 +102,14 @@ a {
 }
 .text-muted {
     color: var(--main-link-color); /* default */
+}
+.media {
+    width: 100%;
+    border-bottom: 1px solid silver;
+    background-color: white;
+    padding: .5em;
+}
+.media-image {
+    width: 50px;
+
 }

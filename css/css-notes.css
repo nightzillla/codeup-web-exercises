@@ -3,7 +3,7 @@ padding - is with the content "paper around the border"
 border - is the picture frame.
 margin - is how far you are from the wall.
 border-radius - makes your corner rounds.
-
+* lorem and hit tab
 
 <style>
 body  { <-- this is called a selector
@@ -22,4 +22,29 @@ h1 {
 
 fonts use rem.
 
+div - create div to create parts of the pages.
+
  */
+body {
+ margin: 20px;
+}
+#main {
+ box-sizing: border-box;
+ width: 400px;
+ border: 4px solid black;
+ border-radius: 7px;
+ padding: 15px;
+ margin-top: 75px;
+ margin-left: 50px;
+ /*box-shadow: -10px -10px 7px 15px darkslategray;*/
+}
+p {
+ box-sizing: border-box;
+ width: 350px;
+ border: 1px solid black;
+ border-radius: 7px;
+ padding: 15px 25px 15px 25px; /* || 15px 25px /*padding: 15px;*/
+ margin: 75px 100px 10px 0;/* <-- top, right, bottom, left short hand */      /*margin-top: 75px;*/
+ /* zero top and bottom, auto right and left*/
+ /*margin: 0 auto;*/
+}

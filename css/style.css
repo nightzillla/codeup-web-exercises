@@ -1,3 +1,13 @@
+.ball {
+    position: absolute;
+    left: 900px;
+    top: 100px;
+}
+table {
+    border: thin solid white;
+    padding: 10px;
+}
+
 .fancy-header {
     /*color: purple;*/
     text-decoration: underline;
@@ -10,7 +20,7 @@ padding: 10px;
 }
 
 h1.fancy-header{
-    color: blue;
+    color: white;
     text-decoration: underline;
 }
 
@@ -70,4 +80,8 @@ a:hover {
 
 a:active {
     color:green;
+}
+
+body {
+    background-size: cover;
 }
