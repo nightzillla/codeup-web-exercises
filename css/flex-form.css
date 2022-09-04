@@ -1,15 +1,15 @@
 html {
-    box-sizing: border-box;
+    box-sizing: border-box;/*Default*/
 }
 
 *, *:before, *:after {
-    box-sizing: inherit;
+    box-sizing: inherit;/*Default*/
 }
 
 body {
     font-family: sans-serif;
     margin: 0;
-    overflow: hidden;
+    overflow: hidden;/*Default*/
 }
 
 .puppiness {
@@ -17,13 +17,16 @@ body {
     position: absolute;
     top: 0;
     width: 100%;
-    object-fit: cover;
+    object-fit: cover; /*Default*/
 }
 
 .cover {
     height: 100vh;
     width: 100%;
-    /* TODO: add a flex container to this selector */
+    /* TODO: add a flex container to this selector */ /*Default*/
+    display: flex;
+    align-items: center;
+
 }
 
 .flex-form {
@@ -31,7 +34,10 @@ body {
     position: relative;
     border: 20px solid rgba(0, 0, 0, 0.3);
     border-radius: 5px;
-    /* TODO: Add an automatic margin and a flex container to this selector */
+    /* TODO: Add an automatic margin and a flex container to this  selector */ /*Default*/
+    margin-left: auto;
+    display: flex;
+
 }
 
 .flex-form > * {
@@ -42,18 +48,21 @@ body {
     font-size: 20px;
     border-radius: 0;
     outline: 0;
-    -webkit-appearance: none;
+    -webkit-appearance: none; /*Default*/
+
 }
 
 .btn-primary {
     background: #b4d455;
     border-top: 1px solid #b4d455;
     border-bottom: 1px solid #b4d455;
-    color: white;
+    color: white;                     /*Default*/
 }
 
 .destination {
     /* TODO:
         Add an explicit size for items along the main axis of 15em.
         Read more about Flex Basis: https://java.codeup.com/appendix/further-reading/html-css/flexbox-additional-concepts/#flex-basis */
+        flex-basis: 15em;
 }
+
