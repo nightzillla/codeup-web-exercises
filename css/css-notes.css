@@ -52,42 +52,67 @@ div - create div to create parts of the pages.
 /* Positioning  */
 
 
-#ipsum, #quenya, #pirate {
+/*#ipsum, #quenya, #pirate {*/
 /*    border: 1px solid black;*/
 /*    width: 25%;*/
 /*    float: left;*/
 /*    padding: 5px;*/
 /*    margin: 1rem;*/
 /*}*/
-#quenya {
-    position: relative;
+/*#quenya {*/
+/*    position: relative;*/
+/*}*/
+/*img[src="img/codeup-logo.png"] {*/
+/*    position: fixed;*/
+/*    top: 25%;*/
+/*    left: 0;*/
+/*    z-index: -1;*/
+/*}*/
+
+/*img[src*="fish"] {*/
+/*    position: absolute;*/
+/*    left: auto;*/
+/*    top: 0;*/
+/*    right: 0;*/
+/*}*/
+
+/*footer {*/
+/*    width: 20%;*/
+/*    margin: auto;*/
+/*}*/
+
+/*footer p {*/
+/*    text-align: center;*/
+/*    position: relative;*/
+/*    left: 5px;*/
+/*}*/
+/*******************************************************************************************************************/
+/*flex box lecture */
+
+.flexbox {
+    border: 1px solid black;
+    padding: 5px;
+    display: flex; /* This Display flex is on the parent */
+    /*flex-direction: column;*/
+    height: 900px;
+    /*flex-wrap: wrap-reverse;*/
+    flex-flow: row wrap;
+    /*Justify-content defines the distribution of space along the main axis of the container*/
+    justify-content: flex-start;
+    /* Align-items controls the alignment of the flex items along the cross axis */
+    align-items: baseline;
+    /* Align-content is used to control how extra cross-axis space is distributed between and around flex lines. It applies only to containers with multiple flex lines. */
+    align-content: center;
 }
-img[src="img/codeup-logo.png"] {
-    position: fixed;
-    top: 25%;
-    left: 0;
-    z-index: -1;
+
+.flex-item {
+    border: 1px solid black;
+    margin: 5px;
+    padding: 5px;
+}
+.upsize {
+    font-size: 150%;
 }
 
-img[src*="fish"] {
-    position: absolute;
-    left: auto;
-    top: 0;
-    right: 0;
-}
-
-footer {
-    width: 20%;
-    margin: auto;
-}
-
-footer p {
-    text-align: center;
-    position: relative;
-    left: 5px;
-}
-
-
-
-
+/*#shein750*/
 
