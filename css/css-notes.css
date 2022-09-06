@@ -102,7 +102,7 @@ div - create div to create parts of the pages.
     /* Align-items controls the alignment of the flex items along the cross axis */
     align-items: baseline;
     /* Align-content is used to control how extra cross-axis space is distributed between and around flex lines. It applies only to containers with multiple flex lines. */
-    align-content: center;
+    align-content: space-around;
 }
 
 .flex-item {
@@ -110,9 +110,19 @@ div - create div to create parts of the pages.
     margin: 5px;
     padding: 5px;
 }
-.upsize {
-    font-size: 150%;
+.one {
+    align-self: flex-end;
+    order: 1;
 }
-
+.two {align-self: center;}
+/*.three {flex-grow: 2;}*/
+.four {
+    /*flex-grow: 1;*/
+    align-self: center;
+}
+/*.five {flex-grow: 0.5;}*/
 /*#shein750*/
-
+.six {
+    align-self: flex-end;
+    order: -1;
+}
