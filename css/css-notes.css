@@ -126,3 +126,14 @@ div - create div to create parts of the pages.
     align-self: flex-end;
     order: -1;
 }
+
+nav, div {
+    display: flex;
+}
+
+div a {
+    display: inline-block;
+    text-align: center;
+    width: 150px;
+    margin: auto;
+}
