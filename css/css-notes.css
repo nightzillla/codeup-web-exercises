@@ -1,4 +1,6 @@
 /*
+<link rel="stylesheet" href=media="print>
+
 padding - is with the content "paper around the border"
 border - is the picture frame.
 margin - is how far you are from the wall.
@@ -23,6 +25,8 @@ h1 {
 fonts use rem.
 
 div - create div to create parts of the pages.
+
+ */
 /*******************************************************************************************************************/
 /* LOGIN BOX
 /*body {*/
@@ -136,4 +140,10 @@ div a {
     text-align: center;
     width: 150px;
     margin: auto;
+}
+
+@media screen and (max-device-width: 400px){
+    div {
+        flex-direction: column;
+    }
 }
