@@ -21,3 +21,10 @@ a {
     padding: .5em;
 }
 
+a:hover {
+    color:blue;
+}
+a:link {
+    color:blueviolet;
+}
+
