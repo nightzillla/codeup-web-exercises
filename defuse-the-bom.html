@@ -31,8 +31,9 @@
     // cancel the interval/timeout for updateTimer()
     function defuseTheBOM() {
         let updateTimer = setTimeout(function () {
-            alert('You defuse the bomb!!!');
-        })
+            alert('You defuse the bomb!!!')
+            clearInterval(bomb)
+            },);
             }
     // Don't modify anything below this line!
     //
