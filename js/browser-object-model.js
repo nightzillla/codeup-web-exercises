@@ -1,3 +1,4 @@
+// Browser Object Model (BOM)
 // setInterval() EXAMPLE
 // let count = 0;
 // let max = 10;
