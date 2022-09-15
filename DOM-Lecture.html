@@ -3,13 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>DOM Lecture</title>
-
+    <link rel="stylesheet" href="css/DOM.css">
 </head>
 <body>
     <p id="like">I like</p>
     <p id="dontLike">I don't like</p>
-    <p id="marvel">Marvel</p>
-    <p id="dc">DC</p>`
+    <p id="marvel">Marvel</p> <!--same as class="hotpink">Marvel</p>  -->
+    <p id="dc">DC</p>
+    <form name="changeColor">
+        <label for="colorPreference">Enter Your Color Preference</label>
+        <input type="text" name="colorPreference" id="colorPreference">
+        <input type="button" id="colorSubmission" value="Submit">
+    </form>
+    <p id="hulk" data-state="hulk" data-strength="super" data-intelligence="low">The Hulk</p> <!-- Data attribute-->
+    <button id="transformHulk">Transform Hulk</button>
 <script src="js/broswer-dom-model.js"></script>
 </body>
 </html>

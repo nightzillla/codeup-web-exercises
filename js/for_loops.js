@@ -28,16 +28,16 @@
 // }
 // //*****************************************************************************************************************************************
 // 4.
-let n = 9; // height of pattern
-let string = ""
-for (let i = 1; i <= 10; i++) { //10 is the height
-
-    for (let j = 1; j <= i ; j++) {
-        string += i;
-    }
-    string += "\n";
-    }
-    console.log(string);
+// let n = 9; // height of pattern
+// let string = ""
+// for (let i = 1; i <= 10; i++) { //10 is the height
+//
+//     for (let j = 1; j <= i ; j++) {
+//         string += i;
+//     }
+//     string += "\n";
+//     }
+//     console.log(string);
 
 // for (let i = 1; 1 <= 9; i++) {8
 //     let outputString = "";
@@ -47,18 +47,18 @@ for (let i = 1; i <= 10; i++) { //10 is the height
 //     console.log(outputString);
 // }
 
-for (let i =1; i <= 9; i++){
-    console.log(i.toString().repeat(i));
-}
+// for (let i =1; i <= 9; i++){
+//     console.log(i.toString().repeat(i));
+// }
 
 // 5.
 // for (let i = 100; i > 0; i -=5) {
 //     console.log(i);
 // }
 
-for (let i = 100; i >= 5; i -=5){
-    console.log(i);
-}
+// for (let i = 100; i >= 5; i -=5){
+//     console.log(i);
+// }
 //************************************************************************************************************************
 
 // let string = "";
@@ -71,3 +71,13 @@ for (let i = 100; i >= 5; i -=5){
 //     string += " " + word;
 //     console.log("Your sentence is: " + string);
 // }
+
+let arr = ["apple", "tomato", "bean"];
+let count = 0;
+for (let i = 0; i < arr[i].length; i++) {
+    // for (let j = 0; j < arr[i].length; j++) {
+    console.log(arr[i].length );
+    }
+    //     console.log(i + " number of elements in arr");
+    // }
+
