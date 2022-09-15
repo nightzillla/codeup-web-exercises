@@ -7,6 +7,7 @@
 <body>
 
 <h1 id="main-header">Hello World!</h1>
+<button id="button">Click Me!</button>
 <ul>
     <li data-dbid="1">Item 1</li>
     <li data-dbid="2">Item 2</li>
@@ -32,26 +33,40 @@
         let mainHeader = document.getElementById('main-header');
         <!-- Use getElementById to get Id from id="main-header"-->
 
+        let button = document.getElementById("button");
+        button.addEventListener('click', function handleClick () {
+            button.textContent = 'JavaScript is Cool'
+        })
+
+            // alert("hi");
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = 'JavaScript is Cool'
+        // mainHeader.innerHTML = 'JavaScript is Cool'
 
         // TODO: Uncomment the next line and get the sub header element by id
         let subHeader = document.getElementById('sub-header') ;
+
 
         // TODO: Set the text color of subHeader to blue
         subHeader.style.color = 'blue';
 
         // TODO: Uncomment the next line and get all list items
+        <!-- Use getElementsByTagName to get li  -->
         let listItems = document.getElementsByTagName('li');
-
+        listItems = Array.from(listItems); // use  nodeLIst into an array
         // TODO: Set text color on every other list item to grey
         for ( let i = 0; i < listItems.length; i++) {
             if (i % 2 !== 0) {
-               listItems[i].style.backgroundColor = 'grey';
+               listItems[i].style.color = 'grey';
             }
         }
         // TODO: Set text color of li with dbid = 1 to blue
-        listItems[1].style.color ='blue';
+        listItems.forEach(function(listItems){
+            if (listItems.dataset.dbid === "1") {
+                // console.log(listItems.innerText); // use this to check Array
+                listItems.style.color = "blue";
+            }
+        });
+        listItems[0].style.color ='blue';
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         let subParagraphs = document.getElementsByClassName('sub-paragraph');
