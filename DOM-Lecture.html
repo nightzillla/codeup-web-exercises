@@ -4,19 +4,55 @@
     <meta charset="UTF-8">
     <title>DOM Lecture</title>
     <link rel="stylesheet" href="css/DOM.css">
+    <style>
+        .btn-square-sm {
+            width: 50px !important;
+            max-width: 100% !important;
+            max-height: 100% !important;
+            height: 50px !important;
+            text-align: center;
+            padding: 0;
+            font-size:7px;
+        }
+        #anotherSquare {
+
+
+        }
+    </style>
 </head>
 <body>
-    <p id="like">I like</p>
-    <p id="dontLike">I don't like</p>
-    <p id="marvel">Marvel</p> <!--same as class="hotpink">Marvel</p>  -->
-    <p id="dc">DC</p>
+<!--    <p id="like">I like</p>-->
+<!--    <p id="dontLike">I don't like</p>-->
+<!--    <p id="marvel">Marvel</p> &lt;!&ndash;same as class="hotpink">Marvel</p>  &ndash;&gt;-->
+<!--    <p id="dc">DC</p>-->
+<!--    <form name="changeColor">-->
+<!--        <label for="colorPreference">Enter Your Color Preference</label>-->
+<!--        <input type="text" name="colorPreference" id="colorPreference">-->
+<!--        <input type="button" id="colorSubmission" value="Submit">-->
+<!--    </form>-->
+<!--    <p id="hulk" data-state="hulk" data-strength="super" data-intelligence="low">The Hulk</p> &lt;!&ndash; Data attribute&ndash;&gt;-->
+<!--    <button id="transformHulk">Transform Hulk</button>-->
+    <!-- DOM event lecture -->
+<!--    <button>The Button</button>-->
+<p>Mini-exercise:
+Use html and css to create a square with a background color on an html page.
+Register an event handler and write its code such that when you click on the square, it
+alerts that it is a square ("I am a square") and
+alerts what color it is. ("I am a big hot pink square")</p>
+
     <form name="changeColor">
+        <button type="button" id="square" class="btn btn-secondary btn-square-sm">I'm a square</button>
         <label for="colorPreference">Enter Your Color Preference</label>
         <input type="text" name="colorPreference" id="colorPreference">
         <input type="button" id="colorSubmission" value="Submit">
     </form>
-    <p id="hulk" data-state="hulk" data-strength="super" data-intelligence="low">The Hulk</p> <!-- Data attribute-->
-    <button id="transformHulk">Transform Hulk</button>
+    <form action="#">
+        <input type="text" id="fromInput">
+
+    </form>
+<p>text</p>
+<div>class="square"</div>
+<div>id="anotherSquare"</div>
 <script src="js/broswer-dom-model.js"></script>
 </body>
 </html>
