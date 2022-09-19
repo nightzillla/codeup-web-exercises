@@ -45,3 +45,14 @@ function longestString(arrayOfStrings){
     }
     return longest;
 }
+
+// Given the attendance object, write a function that returns the total attendance across all team,
+// Given the attendance object, write a function that returns the average attendance
+// Given the attendance object, write a function that returns an object with totalAttendnace and averageAttendance properites set to the correct value.
+
+const attendance = {
+    miami: 32789
+    buffalo: 45678
+    portland: 24567
+}
+
