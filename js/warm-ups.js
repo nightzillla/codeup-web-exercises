@@ -46,13 +46,68 @@ function longestString(arrayOfStrings){
     return longest;
 }
 
-// Given the attendance object, write a function that returns the total attendance across all team,
-// Given the attendance object, write a function that returns the average attendance
-// Given the attendance object, write a function that returns an object with totalAttendnace and averageAttendance properites set to the correct value.
+
 
 const attendance = {
-    miami: 32789
-    buffalo: 45678
-    portland: 24567
+    miami: 32789,
+    buffalo: 45678,
+    portland: 24567,
+}
+// let miami = 32789
+// let buffalo = 45678
+// let portland = 24567
+
+// for (i = 0, i < miami.length; i++) {
+//     console.log(miami);
+//     console.log(buffalo);
+//     console.log(portland);
+// }
+
+// Given the attendance object, write a function that returns the total attendance across all team,
+// function totalAttendance(attendanceObject) {
+//     let attendanceArray = Object.values(attendanceObject);
+//     let total = 0;
+//     for (let i = 0; i < attendanceArray.length; i++) {
+//         total += attendanceArray[i];
+//     }
+//     return total;
+// }
+
+// function totalAttendance(attendanceObject) {
+//     let total = 0;
+//     for (const prop in attendance) {
+//         total += attendance[prop];
+//     }
+//     return total;
+// }
+
+// for (const prop in attendance) {
+//     console.log(attendance[prop]);
+// }
+    // attendanceArray.forEach(function (attendance){
+    //     total += attendance;
+    // });
+    // }
+
+// Given the attendance object, write a function that returns the average attendance
+
+function averageAttendance(attendanceObject) {
+    let total = 0;
+    for (const prop in attendance) {
+        total += attendance[prop];
+    }
+    return total/Object.keys(attendance).length;
+}
+// Given the attendance object, write a function that returns an object with totalAttendnace and averageAttendance properites set to the correct value.
+
+function createObject(averageAttendance) {
+    let total = 0;
+    for (const prop in attendance) {
+        total += attendance[prop];
+    }
+    return {
+        totalAttendance: total,
+        averageAttendance: total/Object.keys(attendance).length
+    }
 }
 
