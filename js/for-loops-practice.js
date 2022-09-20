@@ -88,24 +88,31 @@
 
 //**********************************************************************************************************************
 // 2. Write a function printArray() prints all elements of 2D array using nested for loops
-let arr = [[1,2],[3,4],[5,6]];
-function printArray(arr) {
-    for(let i = 0; i < arr.length; i++) {
-        for(let j = 0; j < arr[0].length; j++) {
-            console.log(arr[i][j]);
+
+let printArrayVar = [[1,2],[3,4],[5,6]];
+function printArray(array) {
+    let newArr = [];
+    for(let i = 0; i < array.length; i++) {
+        for(let j = 0; j < array[i].length; j++) {
+            console.log(array[i][j]);
         }
     }
 }
+
 //**********************************************************************************************************************
-// 3. Write a function printEven() prints all the even numbers of a 2D array using for loops.
+// 3. Write a function printEven() prints all the even numbers of an array using for loops.
+
 let val = [13,23,12,45,22,48,66,100]
 function printEven(val) {
-    for(let i = 0; i < val.length; i++) {
-        if(val[i] % 2 === 0) {
-            console.log(val[i]);
+    for (let i = 0; i < val.length; i++) {
+        if (val[i] % 2 === 0) {
+            console.log(val[i])
         }
     }
 }
+
+//**********************************************************************************************************************
+// 4.
 // let arr = [-100, 2, 3, 4, 5, 6, 7, 8, 90, 13, 15, 1]
 // function minMax (array) {
 //     let min = 0;
@@ -132,3 +139,37 @@ function printEven(val) {
 //     console.log(newArr);
 // }
 
+
+function showMultiplicationTable(num) {
+    // create a loop that runs 10x
+    for (let i = 1; i < 11; i += 1) {
+        console.log(num + ' x ' + i + ' = ' + num * i);
+    }
+}
+
+// showMultiplicationTable(7);
+
+// taken from - https://stackoverflow.com/questions/4959975/generate-random-number-between-two-numbers-in-javascript
+function randomIntFromInterval(min, max) { // min and max included
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+
+function createTenRandomEvenOddMessages() {
+    var random, evenOddString;
+    for (var i = 0; i < 10; i += 1) {
+        random = randomIntFromInterval(20, 200);
+        evenOddString = (random % 2 === 0) ? 'even' : 'odd';
+        console.log(random + ' is ' + evenOddString);
+    }
+}
+
+// createTenRandomEvenOddMessages();
+
+// for (var i = 1; i <= 9; i += 1) {
+//     console.log(String(i).repeat(i));
+// }
+
+// for (var i = 100; i > 0; i -= 5) {
+//     console.log(i);
+// }
