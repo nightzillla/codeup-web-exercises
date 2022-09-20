@@ -1,58 +1,58 @@
 // Write a function that accepts an array of numbers and returns it average.
 // Bonus: if there are any non-numic values in the array, return false; Numeric strings should count as numeric values.
-
-function isNumber(value){
-    return !(isNaN(value) || typeof value === "boolean" || value === null)
-}
-
-
-let array = [5, 10, 15];
-let array2 = [-25,-22,258, 68];
-let array3 = ["notANumber", 25, 78];
-
-function arrayAverage(array){
-    let total = 0;
-    array.forEach(number => {total += number});
-    return total/array.length;
-}
-
-function arrayAverage(array){
-    if( array === undefined){
-        return false;
-    }
-    let total = 0;
-    for (let i = 0; i < array.length; i++) {
-        if (!isNumber(array[i])){
-            return false;
-        }
-        total += array[i];
-    }
-    return total/array.length;
-}
-
+//
+// function isNumber(value){
+//     return !(isNaN(value) || typeof value === "boolean" || value === null)
+// }
+//
+//
+// let array = [5, 10, 15];
+// let array2 = [-25,-22,258, 68];
+// let array3 = ["notANumber", 25, 78];
+//
+// function arrayAverage(array){
+//     let total = 0;
+//     array.forEach(number => {total += number});
+//     return total/array.length;
+// }
+//
+// function arrayAverage(array){
+//     if( array === undefined){
+//         return false;
+//     }
+//     let total = 0;
+//     for (let i = 0; i < array.length; i++) {
+//         if (!isNumber(array[i])){
+//             return false;
+//         }
+//         total += array[i];
+//     }
+//     return total/array.length;
+// }
+//
 
 // Write a function that accepts an array of strings and returns the longest string. If there are two strings of equal length it returns the one with the lowest index.
 // Bonus: if there are any values that are not strings, return false;
 
 
-let stringArray = ["Jabba", "Darth Maul", "Hondo", "buzzworthy"];
-function longestString(arrayOfStrings){
-    let longest = '';
-    for (let i =0; i < arrayOfStrings.length; i++){
-        if (arrayOfStrings[i].length > longest.length){ //longest = arrayOfStrings[i];
-            longest = arrayOfStrings[i];
-        }
-    }
-    return longest;
-}
+// let stringArray = ["Jabba", "Darth Maul", "Hondo", "buzzworthy"];
+// function longestString(arrayOfStrings){
+//     let longest = '';
+//     for (let i =0; i < arrayOfStrings.length; i++){
+//         if (arrayOfStrings[i].length > longest.length){ //longest = arrayOfStrings[i];
+//             longest = arrayOfStrings[i];
+//         }
+//     }
+//     return longest;
+// }
 
 
 
-const attendance = {
-    miami: 32789,
-    buffalo: 45678,
-    portland: 24567,
-}
+// const attendance = {
+//     miami: 32789,
+//     buffalo: 45678,
+//     portland: 24567,
+// }
 // let miami = 32789
 // let buffalo = 45678
 // let portland = 24567
@@ -91,25 +91,25 @@ const attendance = {
 
 // Given the attendance object, write a function that returns the average attendance
 
-function averageAttendance(attendanceObject) {
-    let total = 0;
-    for (const prop in attendance) {
-        total += attendance[prop];
-    }
-    return total/Object.keys(attendance).length;
-}
+// function averageAttendance(attendanceObject) {
+//     let total = 0;
+//     for (const prop in attendance) {
+//         total += attendance[prop];
+//     }
+//     return total/Object.keys(attendance).length;
+// }
 // Given the attendance object, write a function that returns an object with totalAttendnace and averageAttendance properites set to the correct value.
-
-function createObject(averageAttendance) {
-    let total = 0;
-    for (const prop in attendance) {
-        total += attendance[prop];
-    }
-    return {
-        totalAttendance: total,
-        averageAttendance: total/Object.keys(attendance).length
-    }
-}
+//
+// function createObject(averageAttendance) {
+//     let total = 0;
+//     for (const prop in attendance) {
+//         total += attendance[prop];
+//     }
+//     return {
+//         totalAttendance: total,
+//         averageAttendance: total/Object.keys(attendance).length
+//     }
+// }
 
 /**
  * Convert Address to Object
@@ -120,17 +120,17 @@ function createObject(averageAttendance) {
  * >> convertAddressToObject('8646 Sunny Oaks') ➞ {streetNumber: '8646', streetName: 'Sunny Oaks'}
  * >> convertAddressToObject('5408 Villa Nueva') ➞ {streetNumber: '5408', streetName: 'Villa Nueva'}
  **/
-
-let address = '8646 Sunny Oaks'
-function convertAddressToObject (addressString){
-    return {
-        streetNumber: address.substring(0, address.indexOf(' '));
-        streetName: addressString.substring(address.indexOf(' ') + 1)
-    }
-    // address.indexOf(' '); // 4
-    // address.substring(0 , 4); // "8646"
-    // let addressArray = address.split(' ')
-}
+//
+// let address = '8646 Sunny Oaks'
+// function convertAddressToObject (addressString){
+//     return {
+//         streetNumber: address.substring(0, address.indexOf(' '));
+//         streetName: addressString.substring(address.indexOf(' ') + 1)
+//     }
+//     // address.indexOf(' '); // 4
+//     // address.substring(0 , 4); // "8646"
+//     // let addressArray = address.split(' ')
+// }
 // what os substring?
 // let address = '8646 Sunny Oaks'
 // why is the index of (' ') = 4?
@@ -152,26 +152,26 @@ function convertAddressToObject (addressString){
  */
 // when you're trying to find total or average use = let total = 0
 // for loops you need to use [i]
-let peopleAndPets = [
-        {name: 'Fernando Mendoza', pets: 1},
-        {name: 'Douglas Hirsh', pets: 8},
-        {name: 'Kenneth Howell', pets: 2}
-        ]
+// let peopleAndPets = [
+//         {name: 'Fernando Mendoza', pets: 1},
+//         {name: 'Douglas Hirsh', pets: 8},
+//         {name: 'Kenneth Howell', pets: 2}
+//         ]
 // for loops
-function totalPets(arrayOfObjects) {
-    let total = 0;
-    for ( let i = 0; i < arrayOfObjects.length, i++) {
-        total += arrayOfObjects[i].pets;
-    }
-}
+// function totalPets(arrayOfObjects) {
+//     let total = 0;
+//     for ( let i = 0; i < arrayOfObjects.length, i++) {
+//         total += arrayOfObjects[i].pets;
+//     }
+// }
 // forEach
-function totalPets(arrayOfObjects) {
-    let total = 0;
-    arrayOfObjects.forEach(function(object) {
-        total += arrayOfObjects.pets;
-    })
-    return total;
-}
+// function totalPets(arrayOfObjects) {
+//     let total = 0;
+//     arrayOfObjects.forEach(function(object) {
+//         total += arrayOfObjects.pets;
+//     })
+//     return total;
+// }
 // .reduce
 // function totalPets(arrayOfObjects) {
 //   return arrayOfObjects.reduce(function(acc, currenValue) {
@@ -191,6 +191,13 @@ function totalPets(arrayOfObjects) {
  * Notes
  * All test arrays will have at least one element and are valid.
  */
+let warmUpArray = [1,2,3,4,5]
+function minMax(arrayOfNumbers) {
+    let newArr = [];
+    for (let i = 0; i <arrayOfNumbers.length; i++) {
+        return minMax(warmUpArray);
+    }
+}
 
 
 /**

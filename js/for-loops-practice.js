@@ -16,16 +16,16 @@
 //     console.log(names[i].length);// [i].length will give you the # of length in the array.
 //     if(i === 2) break; // it will count john = 0; bob = 1; mary = 2;
 // }
-for(let i = 1; i <= 5; i++){
-    if (i % 2 !== 0) {
-        console.log(i)
-    }
-}
-for(let i = 5; i >= 1; i--){
-    if (i % 2 !== 0) {
-        console.log(i)
-    }
-}
+// for(let i = 1; i <= 5; i++){
+//     if (i % 2 !== 0) {
+//         console.log(i)
+//     }
+// }
+// for(let i = 5; i >= 1; i--){
+//     if (i % 2 !== 0) {
+//         console.log(i)
+//     }
+// }
 // for of loop
 // for (name of names) {
 //     console.log(name);
@@ -75,3 +75,60 @@ for(let i = 5; i >= 1; i--){
 //         }
 //         return total;
 //     }
+//**********************************************************************************************************************
+// 1. Write a function that print numbers from 1 to 10
+
+// function oneToTen(count) {
+//     for(let i = 0; i <= 10; i++) {
+//         return i % 2 === 0
+//     }
+//     console.log(i)
+//
+// }
+
+//**********************************************************************************************************************
+// 2. Write a function printArray() prints all elements of 2D array using nested for loops
+let arr = [[1,2],[3,4],[5,6]];
+function printArray(arr) {
+    for(let i = 0; i < arr.length; i++) {
+        for(let j = 0; j < arr[0].length; j++) {
+            console.log(arr[i][j]);
+        }
+    }
+}
+//**********************************************************************************************************************
+// 3. Write a function printEven() prints all the even numbers of a 2D array using for loops.
+let val = [13,23,12,45,22,48,66,100]
+function printEven(val) {
+    for(let i = 0; i < val.length; i++) {
+        if(val[i] % 2 === 0) {
+            console.log(val[i]);
+        }
+    }
+}
+// let arr = [-100, 2, 3, 4, 5, 6, 7, 8, 90, 13, 15, 1]
+// function minMax (array) {
+//     let min = 0;
+//     let max = 0;
+//
+//
+//     for (let i = 0; i < array.length; i++) {
+//         if (max == 0) {
+//             max = array[i];
+//         }
+//         if (max < array[i]) {
+//             max = array[i];
+//         }
+//     }
+//     for (let i = 0; i < array.length; i++) {
+//         if (min == 0) {
+//             min = array[i];
+//         }
+//         if (min > array[i]) {
+//             min = array[i];
+//         }
+//     }
+//     let newArr = [min, max];
+//     console.log(newArr);
+// }
+
