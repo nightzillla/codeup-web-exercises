@@ -10,4 +10,4 @@ function init() {
     });
 }
 
-window.onload =init;
+window.onload = init;
