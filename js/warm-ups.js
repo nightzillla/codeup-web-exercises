@@ -121,6 +121,22 @@ function createObject(averageAttendance) {
  * >> convertAddressToObject('5408 Villa Nueva') ➞ {streetNumber: '5408', streetName: 'Villa Nueva'}
  **/
 
+let address = '8646 Sunny Oaks'
+function convertAddressToObject (addressString){
+    return {
+        streetNumber: address.substring(0, address.indexOf(' '));
+        streetName: addressString.substring(address.indexOf(' ') + 1)
+    }
+    // address.indexOf(' '); // 4
+    // address.substring(0 , 4); // "8646"
+    // let addressArray = address.split(' ')
+}
+// what os substring?
+// let address = '8646 Sunny Oaks'
+// why is the index of (' ') = 4?
+// address.substring(4) = " Sunny Oaks"
+// address.substring ( 4 +1) = "Sunny Oaks"
+// convert string to object
 
 /**
  * Count total pets
@@ -134,6 +150,34 @@ function createObject(averageAttendance) {
  *       {name: 'Kenneth Howell', pets: 2}
  *    ]) ➞ 11
  */
+// when you're trying to find total or average use = let total = 0
+// for loops you need to use [i]
+let peopleAndPets = [
+        {name: 'Fernando Mendoza', pets: 1},
+        {name: 'Douglas Hirsh', pets: 8},
+        {name: 'Kenneth Howell', pets: 2}
+        ]
+// for loops
+function totalPets(arrayOfObjects) {
+    let total = 0;
+    for ( let i = 0; i < arrayOfObjects.length, i++) {
+        total += arrayOfObjects[i].pets;
+    }
+}
+// forEach
+function totalPets(arrayOfObjects) {
+    let total = 0;
+    arrayOfObjects.forEach(function(object) {
+        total += arrayOfObjects.pets;
+    })
+    return total;
+}
+// .reduce
+// function totalPets(arrayOfObjects) {
+//   return arrayOfObjects.reduce(function(acc, currenValue) {
+//         return acc + currenValue.pets;
+//     }, 0)
+// }
 
 /**
  * Find the Smallest and Biggest Numbers
@@ -178,3 +222,4 @@ function createObject(averageAttendance) {
 // *
 // * Examples
 // * >> sortDrinkByPrice(drinks) ➞ [{name: "lime", price: 10}, {name: "lemonade", price: 50}]
+
