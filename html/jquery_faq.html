@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>jquery faq</title>
+    </head>
+    <style>
+        .hidden {
+            visibility: hidden;
+        }
+    </style>
+    <body>
+    <p>10 FAQs about National parks</p>
+
+    <dl>
+        <dt>Yellowstone National Park</dt>
+        <dd class="invisible">A large feline inhabiting Bodmin Moor.</dd>
+
+        <dt>Yosemite National Park</dt>
+        <dd class="invisible">A sea serpent.</dd>
+
+        <dt>Grand Canyon National Park</dt>
+        <dd class="invisible">A giant owl-like creature.</dd>
+
+        <dt>Zion National Park</dt>
+        <dd class="invisible">A large feline inhabiting Bodmin Moor.</dd>
+
+        <dt>Rocky Mountain National Park</dt>
+        <dd class="invisible">A sea serpent.</dd>
+
+        <dt>Big Bend National Park</dt>
+        <dd class="invisible">A giant owl-like creature.</dd>
+
+        <dt>Death Valley National Park</dt>
+        <dd class="invisible">A large feline inhabiting Bodmin Moor.</dd>
+
+        <dt>Olympic National Park</dt>
+        <dd class="invisible">A sea serpent.</dd>
+
+        <dt>Kenai Fjords National Park</dt>
+        <dd class="invisible">A giant owl-like creature.</dd>
+
+        <dt>Acadia National Park</dt>
+        <dd class="invisible">A giant owl-like creature.</dd>
+
+    </dl>
+    <a href="#" id="highlight-important">Click to toggle the highlighting of important text.</a>
+<!--    Create some CSS rules that sets elements with the invisible class to visibility: hidden;.-->
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script>
+        // $('.invisible').css('visibility', 'hidden');
+        $(document).ready(function() {
+            $('#highlight-important').click(function(event) {
+                event.preventDefault();
+                $('.invisible').toggleClass('hidden');
+            });
+        });
+        // $(document).toggleClass(function(){
+        //     $('.invisible').click(function(event){
+        //         event.preventDefault();
+        //         $('.invisible').toggleClass('visible')
+        //     });
+        // })
+    </script>
+    </body>
+</html>

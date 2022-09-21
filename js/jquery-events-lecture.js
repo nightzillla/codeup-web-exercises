@@ -15,7 +15,8 @@ $(function(){
         alert("oooohhhh yeaaaah");
     })
     $(".box").hover(function(){
-        $(this).addClass("hotpink");
+        // $(this).addClass("hotpink");
+        $(this).toggleClass('hotpink');
     },
       function(){
         $(this).removeClass("hotpink");
@@ -24,7 +25,12 @@ $(function(){
     $(document).keydown(function(){
         alert("you just pressed a key down");
         console.log(e.originalEvent.key);
-    })
+    });
+
+    console.log($("div").text());
+    console.log($("div".html()));
+    $("div").html("<ul><li>Hi I am a list</li></ul>");
+    $("div").text("I can set the content like this");
 });
 
 let i = 0;
