@@ -20,7 +20,7 @@ for(let i = 0; i < names.length; i ++) {
 }
 */
 //**********************************************************************************************************************
-
+/*
 // WHILE LOOPS
 // A while loop is a basic looping construct that will execute a code block as long as a certain condition is true. For example:
 let i = 0;
@@ -28,7 +28,7 @@ while ( i < 10) {
     console.log('while loop iteration #' + 1);
     i++
 }
-
+*/
 // for(let i = 1; i <= 5; i++){
 //     if (i % 2 !== 0) {
 //         console.log(i)
