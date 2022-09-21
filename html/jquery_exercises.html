@@ -27,8 +27,12 @@
        });
        $('li').hover(
            function() {
-               $(this).css('background-color', '#FF0',);
-           });
+               $(this).css('color', 'red',);
+           },
+           function() {
+               $(this).css('color', 'unset');
+           }
+       );
     </script>
 <!--    <script>-->
 <!--    $(function(){-->

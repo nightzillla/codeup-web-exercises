@@ -1,21 +1,34 @@
-// DIFFERENT VARIATION OF FOR LOOPS
-// for
-// for of
-// for in
-// while
-// do while
-// forEach
+/* DIFFERENT VARIATION OF FOR LOOPS
+    for
+    for of
+    for in
+    while
+    do while
+    forEach
+*/
+//**********************************************************************************************************************
+/*
+1st Initialization     let 1 = 0;
+2nd Condition          i < 5;
+3rd Final Expression   i ++;
+const names = ['john', 'bob', 'mary', 'joe'] // name is an array
+for loop
+for(let i = 0; i < names.length; i ++) {
+    console.log(names[i]); // [i] gives you all the name in the array
+    console.log(names[i].length);// [i].length will give you the # of length in the array.
+    if(i === 2) break; // it will count john = 0; bob = 1; mary = 2;
+}
+*/
+//**********************************************************************************************************************
 
-// 1st Initialization     let 1 = 0;
-// 2nd Condition          i < 5;
-// 3rd Final Expression   i ++;
-// const names = ['john', 'bob', 'mary', 'joe'] // name is an array
-// for loop
-// for(let i = 0; i < names.length; i ++) {
-//     console.log(names[i]); // [i] gives you all the name in the array
-//     console.log(names[i].length);// [i].length will give you the # of length in the array.
-//     if(i === 2) break; // it will count john = 0; bob = 1; mary = 2;
-// }
+// WHILE LOOPS
+// A while loop is a basic looping construct that will execute a code block as long as a certain condition is true. For example:
+let i = 0;
+while ( i < 10) {
+    console.log('while loop iteration #' + 1);
+    i++
+}
+
 // for(let i = 1; i <= 5; i++){
 //     if (i % 2 !== 0) {
 //         console.log(i)
@@ -89,27 +102,27 @@
 //**********************************************************************************************************************
 // 2. Write a function printArray() prints all elements of 2D array using nested for loops
 
-let printArrayVar = [[1,2],[3,4],[5,6]];
-function printArray(array) {
-    let newArr = [];
-    for(let i = 0; i < array.length; i++) {
-        for(let j = 0; j < array[i].length; j++) {
-            console.log(array[i][j]);
-        }
-    }
-}
+// let printArrayVar = [[1,2],[3,4],[5,6]];
+// function printArray(array) {
+//     let newArr = [];
+//     for(let i = 0; i < array.length; i++) {
+//         for(let j = 0; j < array[i].length; j++) {
+//             console.log(array[i][j]);
+//         }
+//     }
+// }
 
 //**********************************************************************************************************************
 // 3. Write a function printEven() prints all the even numbers of an array using for loops.
 
-let val = [13,23,12,45,22,48,66,100]
-function printEven(val) {
-    for (let i = 0; i < val.length; i++) {
-        if (val[i] % 2 === 0) {
-            console.log(val[i])
-        }
-    }
-}
+// let val = [13,23,12,45,22,48,66,100]
+// function printEven(val) {
+//     for (let i = 0; i < val.length; i++) {
+//         if (val[i] % 2 === 0) {
+//             console.log(val[i])
+//         }
+//     }
+// }
 
 //**********************************************************************************************************************
 // 4.
