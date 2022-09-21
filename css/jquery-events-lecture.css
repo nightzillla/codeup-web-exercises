@@ -1,0 +1,10 @@
+.box {
+    height: 100px;
+    width: 100px;
+    margin: 15px auto;
+    border: 1px solid black;
+}
+/* creating a class in css down below */
+.hotpink {
+    background-color: hotpink;
+}
