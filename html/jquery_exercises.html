@@ -6,11 +6,11 @@
     </head>
     <body>
     <div>
-        <h1 class="heading">Jquery Selectors</h1>
+        <h1 class="codeUp">Jquery Selectors</h1>
         <p id="container">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aut dignissimos distinctio dolorum, ea eaque error esse minima nam nulla odit possimus quas, ratione reiciendis totam voluptatem voluptates. Magnam, minus.</p>
         <ul>
-            <li class="framework">React</li>
-            <li class="framework">Vue</li>
+            <li class="codeUp">React</li>
+            <li class="codeUp">Vue</li>
             <li id="library">jQuery</li>
         </ul>
     </div>
@@ -20,8 +20,28 @@
     <script>
     $(function(){
         alert('The DOM has finished loading!')
-    })
+    });
+    let contents = $('#container').html();{
+        alert('This is coming from an id!')
+    }
+    let liContents = $('#library').html();{
+        alert('This is coming from an Library!')
+    }
+    let h1Content = $('h1').html();{
+        alert('This is coming from H1!')
+    }
+    $(".codeUp").css({
+        'border': '1px solid red',
+        'width': 'fit-content'
+    });
+    $('li').css('font-size', '20px');
+    $("h1,li,p").css({ backgroundColor: "#FFFF88", 'width': 'fit-content'});
     </script>
-<!--    <script src="../js/jquery_exercises.js"></script>-->
+    <script>
+        $( document ).click(function() {
+            $('h1').toggle( "highlight" );
+        });
+    </script>
+    <script src="../js/jquery_exercises.js"></script>
     </body>
 </html>
