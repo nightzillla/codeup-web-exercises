@@ -21,4 +21,14 @@ $(function(){
         $(this).removeClass("hotpink");
        // $(this).css('background-color', 'unset')
       });
+    $(document).keydown(function(){
+        alert("you just pressed a key down");
+        console.log(e.originalEvent.key);
+    })
 });
+
+let i = 0;
+while (i < 10) { // shows 0, then 1, then 2
+    i++;
+    console.log(i)
+}

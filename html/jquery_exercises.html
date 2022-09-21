@@ -18,31 +18,43 @@
     <!-- CDN jquery -->
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script>
-    $(function(){
-        alert('The DOM has finished loading!')
-    });
-    let contents = $('#container').html();{
-        alert('This is coming from an id!')
-    }
-    let liContents = $('#library').html();{
-        alert('This is coming from an Library!')
-    }
-    let h1Content = $('h1').html();{
-        alert('This is coming from H1!')
-    }
-    $(".codeUp").css({
-        'border': '1px solid red',
-        'width': 'fit-content'
-    });
-        let total = $('h1,li,p');
-    $('li').css('font-size', '20px');
-    $(total).css({ backgroundColor: "#FFFF88", 'width': 'fit-content'});
+       $("h1").click(function(){
+           // $(".codeUp").css("background-color", "white");
+           $(this).css("background-color", "red", "width: 'fit-content",);
+       })
+       $('p').dblclick(function(e) {
+           $('p').css('font-size', '18px');
+       });
+       $('li').hover(
+           function() {
+               $(this).css('background-color', '#FF0',);
+           });
     </script>
-    <script>
-        $( document ).click(function() {
-            $('h1').toggle( "highlight" );
-        });
-    </script>
-    <script src="../js/jquery_exercises.js"></script>
+<!--    <script>-->
+<!--    $(function(){-->
+<!--        alert('The DOM has finished loading!')-->
+<!--    });-->
+<!--    let contents = $('#container').html();{-->
+<!--        alert('This is coming from an id!')-->
+<!--    }-->
+<!--    let liContents = $('#library').html();{-->
+<!--        alert('This is coming from an Library!')-->
+<!--    }-->
+<!--    let h1Content = $('h1').html();{-->
+<!--        alert('This is coming from H1!')-->
+<!--    }-->
+<!--    $(".codeUp").css({-->
+<!--        'border': '1px solid red',-->
+<!--        'width': 'fit-content'-->
+<!--    });-->
+<!--        let total = $('h1,li,p');-->
+<!--    $('li').css('font-size', '20px');-->
+<!--    $(total).css({ backgroundColor: "#FFFF88", 'width': 'fit-content'});-->
+<!--    </script>-->
+<!--    <script>-->
+<!--        $( document ).click(function() {-->
+<!--            $('h1').toggle( "highlight" );-->
+<!--        });-->
+<!--    </script>-->
     </body>
 </html>
