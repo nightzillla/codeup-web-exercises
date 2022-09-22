@@ -14,28 +14,28 @@
 
     <dl>
         <dt>Yellowstone National Park</dt>
-        <dd class="invisible">A large feline inhabiting Bodmin Moor.</dd>
+        <dd class="invisible">How many employees are in the National Park Service?</dd>
 
         <dt>Yosemite National Park</dt>
-        <dd class="invisible">A sea serpent.</dd>
+        <dd class="invisible">How old is the National Park System?</dd>
 
         <dt>Grand Canyon National Park</dt>
-        <dd class="invisible">A giant owl-like creature.</dd>
+        <dd class="invisible">What is the origin of the National Park Service arrowhead?</dd>
 
         <dt>Zion National Park</dt>
-        <dd class="invisible">A large feline inhabiting Bodmin Moor.</dd>
+        <dd class="invisible">How many areas are in the National Park System?</dd>
 
         <dt>Rocky Mountain National Park</dt>
-        <dd class="invisible">A sea serpent.</dd>
+        <dd class="invisible">How many people visit the national parks?</dd>
 
         <dt>Big Bend National Park</dt>
-        <dd class="invisible">A giant owl-like creature.</dd>
+        <dd class="invisible">Can I bring my pet to a national park?</dd>
 
         <dt>Death Valley National Park</dt>
         <dd class="invisible">A large feline inhabiting Bodmin Moor.</dd>
 
         <dt>Olympic National Park</dt>
-        <dd class="invisible">A sea serpent.</dd>
+        <dd class="invisible">How do I apply for a job with the National Park Service?</dd>
 
         <dt>Kenai Fjords National Park</dt>
         <dd class="invisible">A giant owl-like creature.</dd>
@@ -44,7 +44,30 @@
         <dd class="invisible">A giant owl-like creature.</dd>
 
     </dl>
+    <h3>Denali National Park</h3>
+    <ul>
+        <li>DNP is home to the highest peak in North America, Denali. Called "The High One" in language of the Athabascan tribe, this towering peak stands at 20,320 feet above sea level.</li>
+        <li>The year of 1910 marked the first time that anyone had successfully summited Denali. It was a group of local residents who celebrated with hot chocolate and donuts.</li>
+        <li>Sable Pass inside DNP is known to be the best area to spot massive grizzly bears.</li>
+        <li>There are 169 different bird species, 39 mammal species, 14 fish species, and one species of amphibian known in Denali, whilst the park is also home to 1,500 species of vascular plants, lichens and mosses.</li>
+    </ul>
+    <h3>Yellowstone National Park</h3>
+    <ul>
+        <li>World's First National Park.</li>
+        <li>A designated World Heritage Site and designated Biosphere Reserve.</li>
+        <li>3,472 square miles or 8,987 square km.</li>
+        <li>96 % in Wyoming and 3 % in Montana.</li>
+    </ul>
+    <h3>Yosemite National Park</h3>
+    <ul>
+        <li>El Capitan is the largest granite monolith in the world. It rises more than 3,000 feet above the valley floor and is a favorite for experienced rock climbers.</li>
+        <li>Yosemite Falls: This is the tallest waterfall in North America. Snow runoff cascades down the 2,425 foot drop, with peak flow in May. In winter, an ice cone is often visible at the top of the falls.</li>
+        <li>Giant Sequoias and Mariposa Grove: Mariposa Grove contains about 500 mature giant sequoias. </li>
+        <li>There are 840 miles of trails to hike in Yosemite National Park</li>
+    </ul>
     <a href="#" id="highlight-important">Click to toggle the highlighting of important text.</a>
+
+    <section><button>Click Me</button></section>
 <!--    Create some CSS rules that sets elements with the invisible class to visibility: hidden;.-->
     <script src="../js/jquery-3.6.1.min.js"></script>
     <script>
@@ -55,12 +78,20 @@
                 $('.invisible').toggleClass('hidden');
             });
         });
-        // $(document).toggleClass(function(){
-        //     $('.invisible').click(function(event){
-        //         event.preventDefault();
-        //         $('.invisible').toggleClass('visible')
-        //     });
-        // })
+        <!-- FOR THE BUTTON -->
+        $("button").on('click', function() {
+            $("ul").last().css("background-color", "yellow");
+        });
+        // When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
+            $("h3").on('click', function () {
+                $("ul").children().css("font-weight", "bold");
+        });
+        // When any list item is clicked, first li of the parent ul should have a font color of blue.
+            $("li").on('click', function () {
+                $("li").parent().first().css("color", "blue");
+        });
+        // istItems.last().css("text-decoration", "underline dotted");
+
     </script>
     </body>
 </html>
