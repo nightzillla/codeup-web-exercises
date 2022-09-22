@@ -1,0 +1,24 @@
+h1 {
+    font-family: Minecraft,sans-serif;
+}
+.main-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#products {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+}
+.button {
+    font-family: Minecraft, sans-serif;
+    margin-left: 780px;
+}
+th {
+    font-family: Minecraft,sans-serif;
+}
+
+tr {
+    font-family: Minecraft,sans-serif;
+}
