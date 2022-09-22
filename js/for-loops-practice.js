@@ -29,7 +29,18 @@ while ( i < 10) {
     i++
 }
 */
+//**********************************************************************************************************************
+/*
+// Create a function named showMultiplicationTable that accepts a number and console.logs the multiplication table for that number (just multiply by the numbers 1 through 10)
+// function showMultiplicationTable() {
+//     let number = prompt("Enter a number");
+//     for (let multiplier = 1; multiplier <= 10; multiplier++) {
+//         console.log(`${number} x ${multiplier} = ${multiplier * number}`);
+//     }
+// }
 
+*/
+//**********************************************************************************************************************
 // for(let i = 1; i <= 5; i++){
 //     if (i % 2 !== 0) {
 //         console.log(i)

@@ -79,8 +79,8 @@
             });
         });
         <!-- FOR THE BUTTON -->
-        $("button").on('click', function() {
-            $("ul").last().css("background-color", "yellow");
+        $("button").click(function (){
+            $("ul li:last-child").css("background-color", "yellow");
         });
         // When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
             $("h3").on('click', function () {
