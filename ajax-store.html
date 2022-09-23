@@ -21,10 +21,11 @@
         </thead>
         <tbody id="insertProducts"></tbody>
     </table>
+<!--        <button>Load Inventory</button>-->
         <!-- Hammer, Drill-->
     </div>
     <div class="button">
-    <button>Buy Me</button>
+    <button2>Buy Me</button2>
     </div>
 <!--    <input type="button" value="Reload Page" onClick="reload">-->
 
@@ -49,25 +50,29 @@
             });
         });
 
+        // function loadInventory() {
+        //
+        // $("button").on('click', () => loadInventory())
+        // }
         // TODO: Take the data from inventory.json and append it to the products table
         //       HINT: Your data should come back as a JSON object; use console.log() to inspect
         //             its contents and fields
         //       HINT: You will want to target #insertProducts for your new HTML elements
-
-        $("html").on({
-            mouseenter: function () {
-                //stuff to do on mouse enter
-            },
-            mouseleave: function () {
-                const roBlox = new Audio("sound/Roblox-Death-Sound.mp3");
-                $('html').hover(e => roBlox.play());
-                alert("dont leave")
-
-            }
-        });
+        // hovering mouse
+        // $("html").on({
+        //     mouseenter: function () {
+        //         //stuff to do on mouse enter
+        //     },
+        //     mouseleave: function () {
+        //         const roBlox = new Audio("sound/Roblox-Death-Sound.mp3");
+        //         $('html').hover(e => roBlox.play());
+        //         alert("dont leave")
+        //
+        //     }
+        // });
         // audio
         const anime = new Audio("sound/Anime-wow.mp3");
-        $('button').click(e => anime.play());
+        $('button2').click(e => anime.play());
 
 
     })();

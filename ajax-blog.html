@@ -6,6 +6,17 @@
   </head>
   <body>
   <div id="post"></div>
+<!--    <table id="products">-->
+<!--      <thead>-->
+<!--      <tr>-->
+<!--        <th>Title</th>-->
+<!--        <th>Content</th>-->
+<!--        <th>Categories</th>-->
+<!--        <th>Date</th>-->
+<!--      </tr>-->
+<!--      </thead>-->
+<!--      <tbody id="insertProducts"></tbody>-->
+<!--    </table>-->
 
   <script src="js/jquery-3.6.1.min.js"></script>
   <script>
@@ -13,12 +24,12 @@
           $.ajax("data/blog.json").done(function (data) {
               data.forEach(function (blog) {
                   let rowTable = `
-                <tr>
-                <td>${blog.title}</td>
-                <td>${blog.content}</td>
-                <td>${blog.categories}</td>
-                <td>${blog.date}</td>
-                </tr>
+                <div class="container justify-content-center">
+                <h2>${blog.title}</h2>
+                <p>${blog.content}</p>
+                <ul>${blog.categories.join(', ')}</ul>
+                <li>${blog.date}</li>
+                </div>
                 `;
                   $("#post").append(rowTable);
                   // console.log(tool)
