@@ -53,9 +53,23 @@
         //       HINT: Your data should come back as a JSON object; use console.log() to inspect
         //             its contents and fields
         //       HINT: You will want to target #insertProducts for your new HTML elements
+
+        $("html").on({
+            mouseenter: function () {
+                //stuff to do on mouse enter
+            },
+            mouseleave: function () {
+                const roBlox = new Audio("sound/Roblox-Death-Sound.mp3");
+                $('html').hover(e => roBlox.play());
+                alert("dont leave")
+
+            }
+        });
         // audio
-        const roBlox = new Audio("sound/Roblox-Death-Sound.mp3");
-        $('button').click(e => roBlox.play());
+        const anime = new Audio("sound/Anime-wow.mp3");
+        $('button').click(e => anime.play());
+
+
     })();
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
