@@ -3,9 +3,11 @@
     <head>
       <meta charset="UTF-8">
       <title>Mapbox Lecture</title>
+      <script src="js/keys.js"></script>
       <script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
       <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet' />
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+        <script src="js/mapbox-geocoder-utlis.js"></script>
       <style>
         #map {
             width: 75%;
@@ -17,8 +19,13 @@
     <div class="container row mx-auto">
       <div id='map' class="mx-auto mt-4"></div>
     </div>
+    <form class="mx-auto mt-2 w-25">
+        <label for="zoom">Set Zoom</label>
+        <input type="text" name="zoom" id="zoom" class="my-2">
+        <button id="zoomSubmit">Submit</button>
+    </form>
     <script>
-      mapboxgl.accessToken = 'pk.eyJ1IjoibmlnaHR6aWxsbGEiLCJhIjoiY2w4ZXBrcDM4MDIxcTNwcnpxYTh3YnhpYiJ9.vU-DUhW8B1xCzSO3wszoOg';
+      mapboxgl.accessToken = MAPBOX_API_TOKEN;
     const map = new mapboxgl.Map({
         container: 'map', // container ID
         style: 'mapbox://styles/mapbox/streets-v11', // style URL in ' '
@@ -30,8 +37,20 @@
         map.setFog({}); // Set the default atmosphere style
       });
       map.setZoom(7); // you can set the zoom
-      map.setCenter([-98.48962, 29.42704]) //
+      map.setCenter([-98.48962, 29.42704]) // longitude, latitude
+      document.getElementById("zoomSubmit").addEventListener('click', function(e){
+          e.preventDefault();
+          map.setZoom(document.getElementById("zoom").value);
+      });
 
+      const codeUpMarker = new mapboxgl.Marker()
+          .setLngLat([-98.48962, 29.42692])
+          .addTo(map);
+      const codeUpPopup = new mapboxgl.Popup()
+          .setHTML('<div class="text-center">\n' +
+              '  <img src="img/send-code.png" class="rounded" alt="code">\n' +
+              '</div>');
+      codeUpMarker.setPopup(codeUpPopup);
     </script>
 
     </body>
