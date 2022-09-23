@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox assignment</title>
+    <script src="js/keys.js"></script>  <!-- this hides your keys -->
+    <!--    this is a link for mapbox library-->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet' />
+    <!--    boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <!--    geocoder.js link-->
+    <script src="js/mapbox-geocoder-utils.js"></script>
+
+    <style>
+        #map {
+            width: 75%;
+            height: 700px;
+        }
+    </style>
+</head>
+<body>
+<div class="container row mx-auto">  <!-- container for map -->
+    <div id='map' class="mx-auto mt-4"></div>
+</div>
+
+
+<script>
+    <!--    this creates map-->
+    mapboxgl.accessToken = MAPBOX_API_TOKEN;  //we gave our token a var MAPBOX on keys.js
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/dark-v10', // style URL
+        center: [-74.5, 40], // starting position [lng, lat]
+        zoom: 0, // starting zoom
+        projection: 'globe' // display the map as a 3D globe
+    });
+    map.on('style.load', () => {
+        map.setFog({}); // Set the default atmosphere style
+
+    });
+    //    creates map^^^^^
+    // Generate a map that shows the city with your favorite restaurant using geocoding
+    const favPlace = new mapboxgl.Marker()
+        .setLngLat([-97.726237, 30.263285])
+        .addTo(map);
+    // Create a marker on your map of the exact location of your favorite restaurant set the zoom to allow for best viewing distance.
+    //     Create a popup with the name of the restaurant.
+    const codeUpPopup = new mapboxgl.Popup()
+        .setHTML('<div class="text-center">\n' +
+            '  <img src="img/send-noodles.png" class="rounded" alt="code">\n' +
+            '</div>');
+    favPlace.setPopup(codeUpPopup);
+    // Redraw the map of the above location at zoom levels 5, 15, and 20. Do this by simply changing the value of zoom level where the map properties are initially set and refresh the page to see the changes. Can the zoom be changed programmatically after the initial map is drawn?
+    map.setZoom(5); // you can set the zoom
+    map.setZoom(15); // you can set the zoom
+    map.setZoom(20); // you can set the zoom
+
+    // gives you coordinates in the console. geocode("600 Narvarro St #600, San Antonio, TX 78205", MAPBOX_API_TOKEN).then(function(result){console.log(result)})
+
+</script>
+</body>
+</html>
