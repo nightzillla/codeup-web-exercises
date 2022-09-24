@@ -192,8 +192,71 @@ while ( i < 10) {
 // }
 //**********************************************************************************************************************
 /*
-//  Write a function that takes in an input, checks that input, and returns true or false depending on some feature of the input (what kind of number, what kind of string, what type of data it is)
-
-
+typeof = data
+// - Write a function that takes in an input, checks that input, and returns true or false depending on some feature of the input (what kind of number, what kind of string, what type of data it is)
 
  */
+/*
+// - Write a function that takes in an input, does something to it, and returns the modified data (do a mathematical operation on it, do a string method to modify it, use an array method to modify an array)
+
+ */
+/*
+// -  Write a function that takes in an array and returns the array modified in some way -- certain elements removed, certain elements modified in a regular way (example, every numerical value doubled, every string uppercased)
+
+ */
+/*
+// - Write a function that accepts an array of objects where each object has at least one property with a numeric value, be able to return the total or average of the numeric values
+ */
+
+//**********************************************************************************************************************
+
+// - Write a function that accepts a string,
+// breaks down the string into components,
+// and returns an object where each component of the string has become the value of a property
+// keywords "breaks down the string into components" make it not into a string.
+// property = value                               black rifle coffee
+// .split(" ") makes it into an array.           property first word = black
+// var pistol = {};    {} = objects
+// pistol.brand = "glock"; make = key
+// car.model = "Camry";
+
+function returnsObjectOfWords (string) {
+    let array = string.split (" ")
+    let obj = {}
+    for ( let i = 0; i < array.length; i++) {
+        let property = "word" + (i+1);
+        obj.property = array[i]
+    }
+    return obj;
+}
+// object.key = value
+// object = glock : key = caliber : value : 9mm
+// obj = object : foo = key : bar = value
+// const obj = { foo: 'bar', baz: 42 };
+
+//**********************************************************************************************************************
+/*
+// - Write a function that analyzes a string, returning the results of the analysis, example, return the length of the string
+ */
+/*
+// - Write a function that analyzes a string, returning an object that contains several properties with information about the string, example, length, firstLetter, and lastLetter properties
+ */
+/*
+// - -- Write a function that takes in a string and modifies it in some way.  Example write a function that takes in a string and replaces every instance of the letter e with the number 3, and every instance of the letter i with the number 1, and every instance of the letter o with the number 0, and a with 4.  Write a function that capitalizes every other letter in the string starting with the first letter, counting blank spaces as characters.  Try the same not counting blank spaces as characters.  Write a function that capitalizes the last letters of every word in a string.
+
+ */
+//**********************************************************************************************************************
+// Write a function that takes in a string and returns a true or false value, based on whether the string has an uppercase character
+// arr = [1 ,2 ,3 ,4, 5] // arr[i] arr[index3] = 4
+// arrL = [cat, dogs, bears] // arrL.length = 3 animals arrL[i] indexOf 0 = cat
+// charAT(i)
+function hasAUppercase (string){
+    for (let i = 0; i < string.length; i++) {
+        let singleLetter = string.charAt(i)
+        if (singleLetter.toUpperCase() === singleLetter) {
+            return true;
+        }
+    } return false;
+}
+
+//**********************************************************************************************************************
