@@ -12,6 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
     <!--    geocoder.js link-->
     <script src="js/mapbox-geocoder-utils.js"></script>
+    <script src="js/jquery-3.6.1.min.js"></script>
 
     <style>
         #map {
@@ -42,20 +43,49 @@
     });
     //    creates map^^^^^
     // Generate a map that shows the city with your favorite restaurant using geocoding
-    const favPlace = new mapboxgl.Marker()
+    const favPlace1 = new mapboxgl.Marker()
         .setLngLat([-97.726237, 30.263285])
+        .addTo(map);
+    const favPlace2 = new mapboxgl.Marker()
+        .setLngLat([-104.808024, 39.67387])
+        .addTo(map);
+    const favPlace3 = new mapboxgl.Marker()
+        .setLngLat([-98.499855, 29.44025])
         .addTo(map);
     // Create a marker on your map of the exact location of your favorite restaurant set the zoom to allow for best viewing distance.
     //     Create a popup with the name of the restaurant.
     const codeUpPopup = new mapboxgl.Popup()
         .setHTML('<div class="text-center">\n' +
-            '  <img src="img/send-noodles.png" class="rounded" alt="code">\n' +
+            // '  <img src="img/send-noodles.png" class="rounded" alt="code">\n' +
             '</div>');
-    favPlace.setPopup(codeUpPopup);
+    favPlace1.setPopup(codeUpPopup);
+    const codeUpPopup2 = new mapboxgl.Popup()
+        .setHTML('<div class="text-center">\n' +
+            // '  <img src="img/send-noodles.png" class="rounded" alt="code">\n' +
+            '</div>');
+    favPlace2.setPopup(codeUpPopup2);
+    const codeUpPopup3 = new mapboxgl.Popup()
+        .setHTML('<div class="text-center">\n' +
+            // '  <img src="img/send-noodles.png" class="rounded" alt="code">\n' +
+            '</div>');
+    favPlace3.setPopup(codeUpPopup3);
     // Redraw the map of the above location at zoom levels 5, 15, and 20. Do this by simply changing the value of zoom level where the map properties are initially set and refresh the page to see the changes. Can the zoom be changed programmatically after the initial map is drawn?
-    map.setZoom(5); // you can set the zoom
-    map.setZoom(15); // you can set the zoom
-    map.setZoom(20); // you can set the zoom
+    // map.setZoom(5); // you can set the zoom
+    // map.setZoom(15); // you can set the zoom
+    // map.setZoom(20); // you can set the zoom
+    $.ajax("data/restaurants.json").done(function (data){
+        data.forEach(function(food){
+            let rowTable = `
+                <tr>
+                <td>${food.Restaurants}</td>
+                <td>${food.Food}</td>
+                <td>${food.Location}</td>
+                </tr>
+                `;
+            $(".setHTML").append(rowTable);
+            // console.log(tool)
+        });
+    });
 
     // gives you coordinates in the console. geocode("600 Narvarro St #600, San Antonio, TX 78205", MAPBOX_API_TOKEN).then(function(result){console.log(result)})
 
