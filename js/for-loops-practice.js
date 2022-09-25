@@ -41,6 +41,40 @@ while ( i < 10) {
 
 */
 //**********************************************************************************************************************
+/*
+// Write a function that accepts an array of numbers and returns it average.
+// Bonus: if there are any non-numic values in the array, return false; Numeric strings should count as numeric values.
+
+function isNumber(value){
+    return !(isNaN(value) || typeof value === "boolean" || value === null)
+}
+
+
+let array = [5, 10, 15];
+let array2 = [-25,-22,258, 68];
+let array3 = ["notANumber", 25, 78];
+
+function arrayAverage(array){
+    let total = 0;
+    array.forEach(number => {total += number});
+    return total/array.length;
+}
+
+function arrayAverage(array){
+    if( array === undefined){
+        return false;
+    }
+    let total = 0;
+    for (let i = 0; i < array.length; i++) {
+        if (!isNumber(array[i])){
+            return false;
+        }
+        total += array[i];
+    }
+    return total/array.length;
+}
+
+//**********************************************************************************************************************
 // for(let i = 1; i <= 5; i++){
 //     if (i % 2 !== 0) {
 //         console.log(i)
