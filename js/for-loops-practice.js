@@ -230,10 +230,33 @@ typeof = data
 // - Write a function that takes in an input, checks that input, and returns true or false depending on some feature of the input (what kind of number, what kind of string, what type of data it is)
 
  */
-/*
+//**********************************************************************************************************************
+
 // - Write a function that takes in an input, does something to it, and returns the modified data (do a mathematical operation on it, do a string method to modify it, use an array method to modify an array)
 
- */
+// do a mathematical operation on it
+function doubleNumber(number){
+    return number * 2;
+}
+// do a string method to modify it
+function upperCase(string) {
+    return string.toUpperCase();
+}
+function repeatString(string) {
+    return string.concat(' ',string);
+}
+// use an array method to modify an array
+let myArray = [1, 3, 5, 7, 9, 11]
+function removeFirstElement(array) {
+    array.shift(); // if you use return array.shift(); it will return 1 from the array  unless you do a 2 step.
+    return array;
+}
+function moveFirstToLast(array) {
+    let firstElement = array.shift();
+    array.push(firstElement);
+    return array;
+}
+//**********************************************************************************************************************
 /*
 // -  Write a function that takes in an array and returns the array modified in some way -- certain elements removed, certain elements modified in a regular way (example, every numerical value doubled, every string uppercased)
 
