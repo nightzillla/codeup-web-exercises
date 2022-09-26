@@ -87,6 +87,40 @@
         });
     });
 
+    let restaurants = [
+        {
+            "Name": "Ramen Tatsu-Ya",
+            "Categories": "Ramen",
+            "Coordinates": "-97.726237, 30.263285",
+        },
+        {
+            "Name": "Pho Bros",
+            "Categories": "Pho",
+            "Coordinates": "-104.808024, 39.67387",
+        },
+        {
+            "Name": "WhatABurger",
+            "Categories": "Burger",
+            "Coordinates": "-98.499855, 29.44025",
+        }
+    ];
+
+    restaurants.forEach(function(data){
+        let coordsSplit = data.split(', ');
+        let newCoords = {
+            lng: coordsSplit[0],
+            lat: coordsSplit[1],
+        };
+        const restaurant = new mapboxgl.Marker().setLngLat(newCoords).addTo(map);
+
+        const restaurantsPopUps = new mapboxgl.Popup().setHTML(`
+            <h3>${data.Name}</h3><p>${data.Categories}</p>`);
+
+        restaurant.setPopup(restaurantsPopUps);
+    })
+
+
+
     // gives you coordinates in the console. geocode("600 Narvarro St #600, San Antonio, TX 78205", MAPBOX_API_TOKEN).then(function(result){console.log(result)})
 
 </script>

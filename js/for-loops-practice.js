@@ -294,3 +294,18 @@ function hasAUppercase (string){
 }
 
 //**********************************************************************************************************************
+/*
+// -- Write a function that takes in an input, checks that input, and returns true or false depending on some feature of the input (what kind of number, what kind of string, what type of data it is)
+function checkType(input, feature) {
+    let typeCheck = typeof input // this will show us input's type
+
+    if (typeCheck === feature){ // this checks if they are equal than return true
+        return true;
+    } else if (typeof parseFloat(input) === 'number' && (feature === 'number')) {
+        return `${input} is an alpha numeric string`
+    } else {
+        return false;
+    }
+}
+ */
+//**********************************************************************************************************************
