@@ -1,3 +1,4 @@
+
 function windCardinalDirection(degrees){
     let cardinalDirection = '';
     if ((degrees > 348.75 && degrees <= 360) || (degrees >=0 && degrees <= 11.25)){
@@ -82,7 +83,7 @@ $(function() {
             // }
 
             if(i % 8 == 0) {
-                $(`body`).append(`<p> Current date ${data.list[i].dt_txt}</p>
+                $(`.card`).append(`<p> Current date ${data.list[i].dt_txt}</p>
                 <p>The current temperature is ${data.list[i].main.temp}</p>`);
             }
 
