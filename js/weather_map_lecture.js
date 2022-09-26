@@ -51,12 +51,12 @@ $(function() {
         lon: -98.48527,
         units: "imperial"
     }).done(function (data) {
-        // console.log("current weather");
-        // console.log(data);
-        // console.log(data.main.temp);
-        // console.log(data.wind.speed);
-        // console.log(windCardinalDirection(data.wind.deg));
-        // $(`body`).append(`<p> The current temperature is ${data.main.temp_max}</p>`);
+        console.log("current weather");
+        console.log(data);
+        console.log(data.main.temp);
+        console.log(data.wind.speed);
+        console.log(windCardinalDirection(data.wind.deg));
+        $(`body`).append(`<p> The current temperature is ${data.main.temp}</p>`);
     });
     $.get("http://api.openweathermap.org/data/2.5/forecast", {
         APPID: OPEN_WEATHER_APPID,
@@ -64,35 +64,12 @@ $(function() {
         lon:   -98.48527,
         units: "imperial"
     }).done(function(data) {
-        // console.log('5 day forecast', data.list[0].main.temp);
-        // console.log(data.list);
-        data.list.forEach((forecast, i) => {
-            // if (index < 1) {
-            //     console.log(data);
-            //     $(`body`).append(`<p> Current date ${data.list[0].dt_txt}</p>
-            //     <p>The current temperature is ${data.list[0].main.temp}</p>`);
-            //     $(`body`).append(`<p> Current date ${data.list[8].dt_txt}</p>
-            //     <p> The current temperature is ${data.list[8].main.temp}</p>`);
-            //     $(`body`).append(`<p> Current date ${data.list[16].dt_txt}</p>
-            //     <p> The current temperature is ${data.list[16].main.temp}</p>`);
-            //     $(`body`).append(`<p> Current date ${data.list[24].dt_txt}</p>
-            //     <p> The current temperature is ${data.list[24].main.temp}</p>`);
-            //     $(`body`).append(`<p> Current date ${data.list[32].dt_txt}</p>
-            //     <p> The current temperature is ${data.list[32].main.temp}</p>`);
-            // }
-
-            if(i % 8 == 0) {
-                $(`body`).append(`<p> Current date ${data.list[i].dt_txt}</p>
-                <p>The current temperature is ${data.list[i].main.temp}</p>`);
-            }
-
-            const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
-            function namedDayFromDay(timeStamp){
-                let dateTime = new Date(timeStamp * 1000);
-                return daysOfWeek[dateTime.getDay()];
-            }
+        console.log('5 day forecast', data);
     });
-})});
+});
 
+        // data.list.forEach((forecast, index) => {
+        //     if (index < 5) {
+        //         console.log(forecast);
+        //     }
 
