@@ -8,6 +8,7 @@
 */
 //**********************************************************************************************************************
 /*
+
 1st Initialization     let 1 = 0;
 2nd Condition          i < 5;
 3rd Final Expression   i ++;
@@ -257,19 +258,17 @@ function moveFirstToLast(array) {
     return array;
 }
 //**********************************************************************************************************************
-/*
-// -  Write a function that takes in an array and returns the array modified in some way -- certain elements removed, certain elements modified in a regular way (example, every numerical value doubled, every string uppercased)
 
- */
-/*
-// - Write a function that accepts an array of objects where each object has at least one property with a numeric value, be able to return the total or average of the numeric values
- */
+/**  Write a function that takes in an array and returns the array modified in some way -- certain elements removed, certain elements modified in a regular way (example, every numerical value doubled, every string uppercased) */
+
+/** Write a function that accepts an array of objects where each object has at least one property with a numeric value, be able to return the total or average of the numeric values */
+
 
 //**********************************************************************************************************************
 
-// - Write a function that accepts a string,
-// breaks down the string into components,
-// and returns an object where each component of the string has become the value of a property
+/** Write a function that accepts a string,
+breaks down the string into components,
+and returns an object where each component of the string has become the value of a property */
 // keywords "breaks down the string into components" make it not into a string.
 // property = value                               black rifle coffee
 // .split(" ") makes it into an array.           property first word = black
@@ -292,18 +291,26 @@ function returnsObjectOfWords (string) {
 // const obj = { foo: 'bar', baz: 42 };
 
 //**********************************************************************************************************************
-/*
-// - Write a function that analyzes a string, returning the results of the analysis, example, return the length of the string
- */
-/*
-// - Write a function that analyzes a string, returning an object that contains several properties with information about the string, example, length, firstLetter, and lastLetter properties
- */
-/*
-// - -- Write a function that takes in a string and modifies it in some way.  Example write a function that takes in a string and replaces every instance of the letter e with the number 3, and every instance of the letter i with the number 1, and every instance of the letter o with the number 0, and a with 4.  Write a function that capitalizes every other letter in the string starting with the first letter, counting blank spaces as characters.  Try the same not counting blank spaces as characters.  Write a function that capitalizes the last letters of every word in a string.
 
- */
+/** Write a function that analyzes a string, returning the results of the analysis, example, return the length of the string */
+function analyzesString(string) {
+    return {
+        length: string.length, // return objects
+        firstLetter: string.charAt(),
+        lastLetter: string.charAt(string.length - 1),
+    };
+}
+
+
+/** Write a function that analyzes a string, returning an object that contains several properties with information about the string, example, length, firstLetter, and lastLetter properties */
+
+
+/**  Write a function that takes in a string and modifies it in some way.  Example write a function that takes in a string and replaces every instance of the letter e with the number 3, and every instance of the letter i with the number 1, and every instance of the letter o with the number 0, and a with 4.  Write a function that capitalizes every other letter in the string starting with the first letter, counting blank spaces as characters.  Try the same not counting blank spaces as characters.  Write a function that capitalizes the last letters of every word in a string. */
+
+
 //**********************************************************************************************************************
-// Write a function that takes in a string and returns a true or false value, based on whether the string has an uppercase character
+/**  Write a function that takes in a string and returns a true or false value, based on whether the string has an uppercase character */
+/*
 // arr = [1 ,2 ,3 ,4, 5] // arr[i] arr[index3] = 4
 // arrL = [cat, dogs, bears] // arrL.length = 3 animals arrL[i] indexOf 0 = cat
 // charAT(i)
@@ -315,20 +322,112 @@ function hasAUppercase (string){
         }
     } return false;
 }
-
+*/
 //**********************************************************************************************************************
+/** Write a function that takes in an input, checks that input, and returns true or false depending on some feature of the input (what kind of number, what kind of string, what type of data it is) */
 /*
-// -- Write a function that takes in an input, checks that input, and returns true or false depending on some feature of the input (what kind of number, what kind of string, what type of data it is)
 function checkType(input, feature) {
     let typeCheck = typeof input // this will show us input's type
 
-    if (typeCheck === feature){ // this checks if they are equal than return true
-        return true;
+    if (typeCheck === feature) { // this checks if they are equal than return true;
     } else if (typeof parseFloat(input) === 'number' && (feature === 'number')) {
         return `${input} is an alpha numeric string`
     } else {
         return false;
     }
 }
+ */
+//**********************************************************************************************************************
+/** Write a function that takes in an array and returns the array modified in some way -- certain elements removed, certain elements modified in a regular way (example, every numerical value doubled, every string uppercase) */
+
+/** Write a function that removes eery odd number form an array*/
+myArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// removes odd from array
+function removeOdds(array) {
+    const newArray = [];
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] % 2 === 0) {  // to show if its even
+            newArray.push(array[i]);
+        }
+    }
+    return newArray;
+}
+/** Write a function that take san array of numeric values and returns an array with all those values doubled */
+function doubleNumbers(array) {
+    const newArray = [];
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] % 2 === 0) {  // to show if its even
+            newArray.push(array[i] * 2);
+        }
+    }
+    return newArray;
+}
+//**********************************************************************************************************************
+/** Write a function that accepts the top three bowling scores and returns the average.
+
+//     Write a function that accepts the top three bowling scores and returns the average.
+// 1. write a function
+// 2. pass in parameters
+// 3. 3 scores ( variables)
+// 4. return something (number)
+
+    let first = 120;
+    let second = 234;
+    let third = 90;
+
+     Modify the function to accept an array of bowling scores and return the average
+
+     Write a function that accepts an array of bowling scores and returns the highest
+
+     Write a function that accepts an array of bowling scores and returns true if the highest score is divisible by 3 */
+
+//**********************************************************************************************************************
+/**
+ * Get Student Top Notes
+ * Create a function named getStudentTopNotes that takes an array of students and returns an array of their top notes.
+ * If the student does not have notes then let's assume their top note is equal to 0.
+ */
+/*
+    const students = [
+        {
+            id: 1,
+            name: "Jacek",
+            notes: [5, 3, 4, 2, 5, 5]
+        },
+        {
+            id: 2,
+            name: "Ewa",
+            notes: [2, 3, 3, 3, 2, 5]
+        },
+        {
+            id: 3,
+            name: "Zygmunt",
+            notes: [2, 2, 4, 4, 3, 3]
+        }
+    ]
+
+    function getStudentTopNotes(arrayOfStudentObject) {
+        let topNotes = [];
+        for (let i = 0; i < arrayOfStudentObject.length; i++) {
+            let topNotes = arrayOfStudentObject[i].notes[0];
+            for (let j = 0; i <arrayOfStudentObject[j].notes.length; j++) {
+                if(arrayOfStudentObject[i].notes[j] > topNotes){
+                    topNotes = arrayOfStudentObject[i].notes[j];
+                }
+            }
+            topNotes.push(topNotes);
+        }
+        return topNotes;
+    }
+
+//     USING ... for forEach method
+//     function getStudentsTopNotes(arrayOfStudentObjects) {
+//         const topNotes = [];
+//         arrayOfStudentObjects.forEach(studentsObject => {
+//             topNotes.push(Math.max(...studentsObject.notes));
+//         });
+//         return topNotes;
+//     }
+// }
  */
 //**********************************************************************************************************************
