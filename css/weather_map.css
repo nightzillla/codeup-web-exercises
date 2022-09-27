@@ -1,3 +1,27 @@
-#weatherBros {
-    font-family:
+@font-face {
+    font-family: superSmash;
+    src: url("/fonts/super-smash-bros.ttf") ;
+}
+a {
+    font-family: superSmash,sans-serif;
+    color: #FFFFFF !important;
+}
+#searchInput {
+    font-family: superSmash, sans-serif;
+}
+#searchButton {
+    font-family: superSmash, sans-serif;
+}
+#navbar {
+    background-color: rgba(211,45,38);
+    color: #FFFFFF !important;
+}
+#weatherBrosFont {
+    padding-right: 10px;
+    padding-left: 7px;
+    color: #FFFFFF;
+    width: 185px;
+    height: 45px;
+    border-radius: 60px;
+    border: 2px solid white;
 }
