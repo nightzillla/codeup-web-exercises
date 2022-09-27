@@ -6,7 +6,7 @@ $(function() {
         let dateTime = new Date(timeStamp * 1000);
         return daysOfWeek[dateTime.getDay()];
     }
-
+    // Function for wind speed.
     function windCardinalDirection(degrees){
         let cardinalDirection = '';
         if ((degrees > 348.75 && degrees <= 360) || (degrees >=0 && degrees <= 11.25)){
@@ -51,11 +51,12 @@ $(function() {
             console.log(data);
             if (i % 8 == 0) {
                 $(`.forecast`).append(`
-                    <div class="card col-2"><p> Current date ${data.list[i].dt_txt}</p>
+                    <div class="card col-2"><p> Current date ${(data.list[i].dt_txt).split(' ')[0]}</p>
+                    <img class="card-img-top" src="http://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png"  alt="Card image cap" style="height: 90px; width: 90px;"> 
                     <p>The current temperature is ${data.list[i].main.temp}</p>
                     <p>Description: ${data.list[i].weather[0].description}</p>
                     <p>Humidity: ${data.list[i].main.humidity}</p>
-                    <p>Wind Speed: ${data.list[i].wind.speed}</p> 
+                    <p>Wind Speed: ${data.list[i].wind.speed} ${windCardinalDirection(data.list[i].wind.deg)}</p> 
                     <p>Pressure: ${data.list[i].main.pressure}</p>
                     </div>`);
             }

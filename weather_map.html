@@ -17,21 +17,21 @@
             #map {
                 height: 300px;
                 width: 80%;
-                margin-left: 80px
+                margin-left: 140px
             }
         </style>
 
     </head>
     <body>
     <nav class="navbar navbar-light bg-light justify-content-between">
-        <a class="navbar-brand">Weather Map</a>
-        <a class="currentCity">Current City</a>
+        <a class="navbar-brand" id="weatherMap" style="margin-left: 30px" id="weatherBros">Weather Bros Map</a>
+        <section class="searchBar d-flex justify-content-center" style="margin-right: 40px">
+            <input id="searchInput" type="search" placeholder="Search City or Zip Code" style ="width: 200px" aria-label="Search">
+            <button id="searchButton" id="searchCity" style="margin-right: 30px">Search City</button>
+        </section>
     </nav>
     <div id="map"></div>
-    <section class="searchBar d-flex justify-content-center">
-        <input id="searchInput" type="search" placeholder="Search" aria-label="Search">
-        <button id="searchButton">Search</button>
-    </section>
+
     <div class="forecast container-fluid row justify-content-center"></div>
 
     <!-- jquery -->
