@@ -1,3 +1,4 @@
+
 $(function() {
     // Function for days of the week
     const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -150,6 +151,7 @@ $(function() {
         }).done(function(data) {
             printWeather(data)
         });
+
         // Search Bar
         document.getElementById('searchButton').addEventListener('click', function (e) {
             e.preventDefault();
@@ -166,6 +168,3 @@ $(function() {
             });
         });
     });
-
-
-
