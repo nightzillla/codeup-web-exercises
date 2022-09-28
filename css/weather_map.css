@@ -2,14 +2,49 @@
     font-family: superSmash;
     src: url("/fonts/super-smash-bros.ttf") ;
 }
+.page-wrapper {
+    width: 100vw;
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+}
 #navbar {
     background-color: rgba(211,45,38);
     color: #FFFFFF !important;
 }
-body {
-    background-image: url("/img/nintendo-switch.png");
-    background-size: cover;
-    background-position: center;
+.main {
+    flex-grow: 1;
+    display:flex;
+}
+.main-center {
+    flex-grow:1;
+}
+.main-left, .main-right {
+    width:250px;
+    position:relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+}
+.main-left {
+    background-color: #4dcaff;
+}
+.main-right {
+    background-color: #ff5b5b;
 }
 #weatherCards {
 
@@ -20,11 +55,6 @@ a {
 }
 #map {
     height: 300px;
-    /*width: 74%;*/
-    /*margin-left: 150px*/
-}
-#switchScreen {
-    width: calc(100% - 400px);
 }
 #searchInput {
     font-family: superSmash, sans-serif;

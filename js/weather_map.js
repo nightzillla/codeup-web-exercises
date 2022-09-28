@@ -1,5 +1,4 @@
 $(function() {
-
     // Function for days of the week
     const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     function namedDayFromDay(timeStamp){
@@ -65,6 +64,36 @@ $(function() {
             }
         });
     }
+    mapboxgl.accessToken = MAPBOX_API_TOKEN;  //we gave our token a var MAPBOX on keys.js
+    const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-99.48962, 29.42692],
+        zoom: 2
+    });
+
+
+// I got the code from  https://docs.mapbox.com/mapbox-gl-js/example/drag-a-marker/ that creates a draggable marker
+    const marker = new mapboxgl.Marker({
+        draggable: true
+    })
+        .setLngLat([-99.48962, 29.42692])
+        .addTo(map);
+
+    function onDragEnd() {
+        const lngLat = marker.getLngLat();
+        console.log(lngLat);
+        // coordinates.style.display = 'block';
+        // coordinates.innerHTML = `Longitude: ${lngLat.lng}<br />Latitude: ${lngLat.lat}`;
+        // created coords so we can call it on updateWeather
+        let coords = [
+            `${lngLat.lng}`,
+            `${lngLat.lat}`
+        ]
+        updateWeather(coords)
+
+    }
+    marker.on('dragend', onDragEnd);
     function updateWeather(coordinates) {
         console.log("inside updateWeather");
         console.log(coordinates[0]);
@@ -79,7 +108,6 @@ $(function() {
             printWeather(data);
         });
     }
-
         $.get("http://api.openweathermap.org/data/2.5/weather", {
             APPID: OPEN_WEATHER_APPID,
             lat: 29.423017,
@@ -106,6 +134,7 @@ $(function() {
                 const userMarker = new mapboxgl.Marker().setLngLat(coordinates).addTo(map);
                 map.setCenter(coordinates);
                 updateWeather(coordinates);
+                updateWeather(coords)
             });
         });
     });

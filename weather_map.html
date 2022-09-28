@@ -18,19 +18,39 @@
     </head>
     <body>
     <!-- This is the NavBar-->
-    <nav class="navbar navbar-light justify-content-between" id="navbar">
-        <a class="navbar-brand" id="weatherBrosFont" style="margin-left: 30px" href="https://www.smashbros.com/en_US/">Weather BROS</a>
-        <section class="searchBar d-flex justify-content-center" style="margin-right: 40px">
-            <input id="searchInput" type="search" placeholder="Search City Or Zip Code" style ="width: 250px" aria-label="Search">
-            <button id="searchButton" id="search" style="margin-right: 30px">Search City</button>
-        </section>
-    </nav>
-    <div class="container" id="switchScreen">
-    <!-- This is the MAP -->
-    <div id="map"class="w-100"></div>
-    <!-- This is weather cards -->
-    <div class="forecast d-flex container-fluid justify-content-center w-100 px-0" id="weatherCards">
-    </div>
+<!--    <nav class="navbar navbar-light justify-content-between" id="navbar">-->
+<!--        <a class="navbar-brand" id="weatherBrosFont" style="margin-left: 30px" href="https://www.smashbros.com/en_US/">Weather BROS</a>-->
+<!--        <section class="searchBar d-flex justify-content-center" style="margin-right: 40px">-->
+<!--            <input id="searchInput" type="search" placeholder="Search City Or Zip Code" style ="width: 250px" aria-label="Search">-->
+<!--            <button id="searchButton" id="search" style="margin-right: 30px">Search City</button>-->
+<!--        </section>-->
+<!--    </nav>-->
+<!--    <div class="container" id="switchScreen">-->
+<!--    &lt;!&ndash; This is the MAP &ndash;&gt;-->
+<!--    <div id="map"class="w-100"></div>-->
+<!--    &lt;!&ndash; This is weather cards &ndash;&gt;-->
+<!--    <div class="forecast d-flex container-fluid justify-content-center w-100 px-0" id="weatherCards">-->
+    <div class="page-wrapper">
+        <div class="header">
+            <nav class="navbar navbar-light justify-content-between" id="navbar">
+                <a class="navbar-brand" id="weatherBrosFont" style="margin-left: 30px" href="https://www.smashbros.com/en_US/">Weather BROS</a>
+                <section class="searchBar d-flex justify-content-center" style="margin-right: 40px">
+                    <input id="searchInput" type="search" placeholder="Search City Or Zip Code" style ="width: 250px" aria-label="Search">
+                    <button id="searchButton" id="search" style="margin-right: 30px">Search City</button>
+                </section>
+            </nav>
+        </div>
+        <div class="main">
+            <div class="main-left">
+            </div>
+            <div class="main-center" id="switchScreen">
+                <!-- This is the MAP -->
+                <div id="map"class="w-100"></div>
+                <!-- This is weather cards -->
+                <div class="forecast d-flex container-fluid justify-content-center w-100 px-0" id="weatherCards"></div>
+            </div>
+            <div class="main-right"></div>
+        </div>
     </div>
 
 
@@ -38,19 +58,37 @@
     <script src="js/jquery-3.6.1.min.js"></script>
     <script src="js/weather_map.js"></script>
     <script>
-        <!--    this creates map-->
-        mapboxgl.accessToken = MAPBOX_API_TOKEN;  //we gave our token a var MAPBOX on keys.js
-        const map = new mapboxgl.Map({
-            container: 'map', // container ID
-            style: 'mapbox://styles/mapbox/dark-v10', // style URL
-            center: [-74.5, 40], // starting position [lng, lat]
-            zoom: 9, // starting zoom
-            projection: 'globe' // display the map as a 3D globe
-        });
-        map.on('style.load', () => {
-            map.setFog({}); // Set the default atmosphere style
-
-        });
+        // <!--    this creates map-->
+        // mapboxgl.accessToken = MAPBOX_API_TOKEN;  //we gave our token a var MAPBOX on keys.js
+        // const map = new mapboxgl.Map({
+        //     container: 'map', // container ID
+        //     style: 'mapbox://styles/mapbox/dark-v10', // style URL
+        //     center: [-99.48962, 29.42692], // starting position [lng, lat]
+        //     zoom: 9, // starting zoom
+        //     projection: 'globe' // display the map as a 3D globe
+        // });
+        // map.on('style.load', () => {
+        //     map.setFog({}); // Set the default atmosphere style
+        //
+        // });
+        // const marker = new mapboxgl.Marker({
+        //     draggable: true
+        // })
+        //     .setLngLat([-99.48962, 29.42692])
+        //     .addTo(map);
+        //
+        // function onDragEnd() {
+        //     const lngLat = marker.getLngLat();
+        //     coordinates.style.display = 'block';
+        //     coordinates.innerHTML = `Longitude: ${lngLat.lng}<br />Latitude: ${lngLat.lat}`;
+        //     // created coords so we can call it on updateWeather
+        //     let coords = [
+        //         `${lngLat.lng}`,
+        //         `${lngLat.lat}`
+        //     ]
+        //     updateWeather(coords)
+        // }
+        // marker.on('dragend', onDragEnd);
     </script>
 
     </body>
