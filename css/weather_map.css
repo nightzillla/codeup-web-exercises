@@ -2,9 +2,22 @@
     font-family: superSmash;
     src: url("/fonts/super-smash-bros.ttf") ;
 }
+body {
+    background-image: url("/img/nintendo-switch.png");
+    background-size: cover;
+    background-position: center;
+}
 a {
     font-family: superSmash,sans-serif;
     color: #FFFFFF !important;
+}
+#map {
+    height: 300px;
+    width: 74%;
+    margin-left: 150px
+}
+#cardHolder{
+
 }
 #searchInput {
     font-family: superSmash, sans-serif;

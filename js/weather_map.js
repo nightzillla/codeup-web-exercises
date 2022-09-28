@@ -49,10 +49,10 @@ $(function() {
         $( ".forecast" ).empty(); // This will clear the cards before you put a new location
         data.list.forEach((forecast, i) => {
             console.log(data);
-            if (i % 8 == 0) {
+            if (i % 8 === 0) {
                 $(`.forecast`).append(`
-                    <div class="card col-2"><p> Current date ${(data.list[i].dt_txt).split(' ')[0]}</p>
-                    <img class="card-img-top" src="http://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png"  alt="Card image cap" style="height: 90px; width: 90px;"> 
+                    <div class="card col-2 weatherCards d-inline-block" style="width: 12rem;"><p> Current date ${(data.list[i].dt_txt).split(' ')[0]}</p>
+                    <img class="card-img-top justify-content-center" src="http://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png"  alt="Card image cap" style="height: 90px; width: 90px;"> 
                     <p>The current temperature is ${data.list[i].main.temp}</p>
                     <p>Description: ${data.list[i].weather[0].description}</p>
                     <p>Humidity: ${data.list[i].main.humidity}</p>
