@@ -50,20 +50,35 @@ $(function() {
             console.log(data);
             if (i % 8 === 0) {
                 $(`.forecast`).append(`
-                    <div class="card weatherCards rounded-0">
-<!--                    <div class="container" style="width: 100%">                  -->
-                    <p class="date"> Current date ${(data.list[i].dt_txt).split(' ')[0]}</p>
-                    <img class="card-img-top justify-content-center" src="http://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png"  alt="Card image cap" style="height: 90px; width: 90px;"> 
-                    <p>The current temperature is ${data.list[i].main.temp}</p>
-                    <p>Description: ${data.list[i].weather[0].description}</p>
-                    <p>Humidity: ${data.list[i].main.humidity}</p>
-                    <p>Wind Speed: ${data.list[i].wind.speed} ${windCardinalDirection(data.list[i].wind.deg)}</p> 
+                    <div class="card weatherCards">                   
+                    <img class="icon card-img-top" src="http://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png"  alt="Card image cap" style="height: 90px; width: 90px; margin: auto"> 
+                    <p class="temp">The current temperature is ${data.list[i].main.temp}</p>
+                    <p class="description">Description: ${data.list[i].weather[0].description}</p>                
+                    <p class="wind">Wind Speed: ${data.list[i].wind.speed} ${windCardinalDirection(data.list[i].wind.deg)}</p> 
                     <p>Pressure: ${data.list[i].main.pressure}</p>
-<!--                    </div>-->
                     </div>`);
             }
         });
     }
+    // THIS IS BACKUP!
+    // function printWeather(data) {
+    //     $( ".forecast" ).empty(); // This will clear the cards before you put a new location
+    //     data.list.forEach((forecast, i) => {
+    //         console.log(data);
+    //         if (i % 8 === 0) {
+    //             $(`.forecast`).append(`
+    //                 <div class="card weatherCards rounded-0">
+    //                  <p class="date"> Current date ${(data.list[i].dt_txt).split(' ')[0]}</p>
+    //                 <img class="icon card-img-top" src="http://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png"  alt="Card image cap" style="height: 90px; width: 90px; margin: auto">
+    //                 <p class="temp">The current temperature is ${data.list[i].main.temp}</p>
+    //                 <p>Description: ${data.list[i].weather[0].description}</p>
+    //                 <p>Humidity: ${data.list[i].main.humidity}</p>
+    //                 <p>Wind Speed: ${data.list[i].wind.speed} ${windCardinalDirection(data.list[i].wind.deg)}</p>
+    //                 <p>Pressure: ${data.list[i].main.pressure}</p>
+    //                 </div>`);
+    //         }
+    //     });
+    // }
     // This is the map
     mapboxgl.accessToken = MAPBOX_API_TOKEN;  //we gave our token a var MAPBOX on keys.js
     const map = new mapboxgl.Map({
@@ -85,8 +100,6 @@ $(function() {
             showUserHeading: true
         })
     );
-
-
 // I got the code from  https://docs.mapbox.com/mapbox-gl-js/example/drag-a-marker/ that creates a draggable marker
     const marker = new mapboxgl.Marker({
         draggable: true
