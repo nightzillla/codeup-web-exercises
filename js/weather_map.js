@@ -51,8 +51,8 @@ $(function() {
             console.log(data);
             if (i % 8 === 0) {
                 $(`.forecast`).append(`
-                    <div class="card weatherCards" style="width: 100%">
-                    <div class="container" style="width: 100%">                  
+                    <div class="card weatherCards rounded-0">
+<!--                    <div class="container" style="width: 100%">                  -->
                     <p> Current date ${(data.list[i].dt_txt).split(' ')[0]}</p>
                     <img class="card-img-top justify-content-center" src="http://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png"  alt="Card image cap" style="height: 90px; width: 90px;"> 
                     <p>The current temperature is ${data.list[i].main.temp}</p>
@@ -60,12 +60,11 @@ $(function() {
                     <p>Humidity: ${data.list[i].main.humidity}</p>
                     <p>Wind Speed: ${data.list[i].wind.speed} ${windCardinalDirection(data.list[i].wind.deg)}</p> 
                     <p>Pressure: ${data.list[i].main.pressure}</p>
-                    </div>
+<!--                    </div>-->
                     </div>`);
             }
         });
     }
-    // This function update new coordinates
     function updateWeather(coordinates) {
         console.log("inside updateWeather");
         console.log(coordinates[0]);

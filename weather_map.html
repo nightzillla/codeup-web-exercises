@@ -25,9 +25,14 @@
             <button id="searchButton" id="search" style="margin-right: 30px">Search City</button>
         </section>
     </nav>
-    <div id="map"></div>
+    <div class="container" id="switchScreen">
+    <!-- This is the MAP -->
+    <div id="map"class="w-100"></div>
+    <!-- This is weather cards -->
+    <div class="forecast d-flex container-fluid justify-content-center w-100 px-0" id="weatherCards">
+    </div>
+    </div>
 
-    <div class="forecast container-fluid row justify-content-center" id="weatherCards"></div>
 
     <!-- jquery -->
     <script src="js/jquery-3.6.1.min.js"></script>

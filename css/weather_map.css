@@ -2,10 +2,17 @@
     font-family: superSmash;
     src: url("/fonts/super-smash-bros.ttf") ;
 }
+#navbar {
+    background-color: rgba(211,45,38);
+    color: #FFFFFF !important;
+}
 body {
     background-image: url("/img/nintendo-switch.png");
     background-size: cover;
     background-position: center;
+}
+#weatherCards {
+
 }
 a {
     font-family: superSmash,sans-serif;
@@ -13,23 +20,17 @@ a {
 }
 #map {
     height: 300px;
-    width: 74%;
-    margin-left: 150px
+    /*width: 74%;*/
+    /*margin-left: 150px*/
 }
-.weatherCards{
-    width: 90px;
+#switchScreen {
+    width: calc(100% - 400px);
 }
-
-
 #searchInput {
     font-family: superSmash, sans-serif;
 }
 #searchButton {
     font-family: superSmash, sans-serif;
-}
-#navbar {
-    background-color: rgba(211,45,38);
-    color: #FFFFFF !important;
 }
 #weatherBrosFont {
     padding-right: 10px;
