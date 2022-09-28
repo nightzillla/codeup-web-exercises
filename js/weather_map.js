@@ -131,7 +131,8 @@ $(function() {
             geocode(address, MAPBOX_API_TOKEN).then(function (coordinates) {
 
                 console.log(coordinates);
-                const userMarker = new mapboxgl.Marker().setLngLat(coordinates).addTo(map);
+                // const userMarker = new mapboxgl.Marker().setLngLat(coordinates).addTo(map);
+                marker.setLngLat(coordinates).addTo(map);
                 map.setCenter(coordinates);
                 updateWeather(coordinates);
                 updateWeather(coords)
