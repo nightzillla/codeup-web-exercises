@@ -52,7 +52,7 @@ $(function() {
                 $(`.forecast`).append(`
                     <div class="card weatherCards rounded-0">
 <!--                    <div class="container" style="width: 100%">                  -->
-                    <p> Current date ${(data.list[i].dt_txt).split(' ')[0]}</p>
+                    <p class="date"> Current date ${(data.list[i].dt_txt).split(' ')[0]}</p>
                     <img class="card-img-top justify-content-center" src="http://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png"  alt="Card image cap" style="height: 90px; width: 90px;"> 
                     <p>The current temperature is ${data.list[i].main.temp}</p>
                     <p>Description: ${data.list[i].weather[0].description}</p>
@@ -64,6 +64,7 @@ $(function() {
             }
         });
     }
+    // This is the map
     mapboxgl.accessToken = MAPBOX_API_TOKEN;  //we gave our token a var MAPBOX on keys.js
     const map = new mapboxgl.Map({
         container: 'map',
@@ -71,6 +72,19 @@ $(function() {
         center: [-99.48962, 29.42692],
         zoom: 2
     });
+    map.addControl(new mapboxgl.NavigationControl());
+    // Add geolocate control to the map.
+    map.addControl(
+        new mapboxgl.GeolocateControl({
+            positionOptions: {
+                enableHighAccuracy: true
+            },
+// When active the map will receive updates to the device's location as it changes.
+            trackUserLocation: true,
+// Draw an arrow next to the location dot to indicate which direction the device is heading.
+            showUserHeading: true
+        })
+    );
 
 
 // I got the code from  https://docs.mapbox.com/mapbox-gl-js/example/drag-a-marker/ that creates a draggable marker

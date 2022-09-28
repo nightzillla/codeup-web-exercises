@@ -1,13 +1,15 @@
-@font-face {
-    font-family: superSmash;
-    src: url("/fonts/super-smash-bros.ttf") ;
-}
+
 .page-wrapper {
     width: 100vw;
     height:100vh;
     overflow:hidden;
     display:flex;
     flex-direction:column;
+}
+/* CUSTOM FONT */
+@font-face {
+    font-family: superSmash;
+    src: url("/fonts/super-smash-bros.ttf") ;
 }
 #navbar {
     background-color: rgba(211,45,38);
@@ -40,14 +42,83 @@
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
 }
-.main-left {
-    background-color: #4dcaff;
-}
 .main-right {
     background-color: #ff5b5b;
 }
-#weatherCards {
+/* LEFT SIDE OF CONTROLLER*/
+.main-left {
+    background-color: #4dcaff;
+}
+.left-thumbStick {
+    position: absolute;
+    left: 100px;
+    top: 230px;
+    width: 60px;
+    height: 60px;
+    border-radius: 99px;
+    background-color: #3a3a3a;
+    background-image: radial-gradient(circle farthest-corner at 50% 50%, hsla(0, 0%, 100%, 0.36), transparent);
+    outline-color: #333;
+    outline-offset: -7px;
+    outline-style: solid;
+    outline-width: 2px;
+}
+/* THIS MOVES ALL 4 ARROWS */
+.controller-arrows {
+    position: absolute;
+    top: 320px;
+    left: 95px;
+    width: 70px;
+    height: 70px;
+}
+.arrow-left {
+    position: absolute;
+    top: 50%;
+    width: 25px;
+    height: 25px;
+    border-radius: 99px;
+    background-color: #303030;
+    -webkit-transform: translate(0px, -50%);
+    -ms-transform: translate(0px, -50%);
+    transform: translate(0px, -50%);
+}
 
+.arrow-right {
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    width: 25px;
+    height: 25px;
+    border-radius: 99px;
+    background-color: #303030;
+    -webkit-transform: translate(0px, -50%);
+    -ms-transform: translate(0px, -50%);
+    transform: translate(0px, -50%);
+}
+
+.arrow-top {
+    position: absolute;
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    border-radius: 99px;
+    background-color: #303030;
+    -webkit-transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, 0%);
+    transform: translate(-50%, 0%);
+}
+
+.arrow-bottom {
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    width: 25px;
+    height: 25px;
+    border-radius: 99px;
+    background-color: #303030;
+    -webkit-transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, 0%);
+    transform: translate(-50%, 0%);
 }
 a {
     font-family: superSmash,sans-serif;
@@ -55,6 +126,7 @@ a {
 }
 #map {
     height: 300px;
+    box-shadow: 5px 10px;
 }
 #searchInput {
     font-family: superSmash, sans-serif;
@@ -70,4 +142,8 @@ a {
     height: 45px;
     border-radius: 60px;
     border: 2px solid white;
+}
+/*Cards*/
+.date {
+    text-align: center;
 }
