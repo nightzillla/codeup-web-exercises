@@ -44,24 +44,28 @@ $(function() {
         }
         return cardinalDirection;
     }
-    // This is where it update weather cards
+    // This is where it updates weather cards
     function printWeather(data) {
         $( ".forecast" ).empty(); // This will clear the cards before you put a new location
         data.list.forEach((forecast, i) => {
             console.log(data);
             if (i % 8 === 0) {
                 $(`.forecast`).append(`
-                    <div class="card col-2 weatherCards d-inline-block" style="width: 12rem;"><p> Current date ${(data.list[i].dt_txt).split(' ')[0]}</p>
+                    <div class="card weatherCards" style="width: 100%">
+                    <div class="container" style="width: 100%">                  
+                    <p> Current date ${(data.list[i].dt_txt).split(' ')[0]}</p>
                     <img class="card-img-top justify-content-center" src="http://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png"  alt="Card image cap" style="height: 90px; width: 90px;"> 
                     <p>The current temperature is ${data.list[i].main.temp}</p>
                     <p>Description: ${data.list[i].weather[0].description}</p>
                     <p>Humidity: ${data.list[i].main.humidity}</p>
                     <p>Wind Speed: ${data.list[i].wind.speed} ${windCardinalDirection(data.list[i].wind.deg)}</p> 
                     <p>Pressure: ${data.list[i].main.pressure}</p>
+                    </div>
                     </div>`);
             }
         });
     }
+    // This function update new coordinates
     function updateWeather(coordinates) {
         console.log("inside updateWeather");
         console.log(coordinates[0]);
