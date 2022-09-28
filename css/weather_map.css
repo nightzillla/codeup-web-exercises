@@ -10,6 +10,14 @@
     font-family: superSmash;
     src: url("/fonts/super-smash-bros.ttf") ;
 }
+#current-city {
+    font-family: superSmash,sans-serif;
+    color: #FFFFFF !important;
+    margin-left: 120px;
+}
+.searchBars{
+    margin-left: 20px
+}
 #navbar {
     background-color: rgba(211,45,38);
     color: #FFFFFF !important;
@@ -82,7 +90,7 @@
 }
 .rectangle {
     position: absolute;
-    width: 40px;
+    width: 30px;
     height: 10px;
     left: 76px;
     top: -25px;

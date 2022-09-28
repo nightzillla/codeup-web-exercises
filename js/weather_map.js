@@ -133,6 +133,7 @@ $(function() {
             units: "imperial" // this is fahrenheit
         }).done(function (data) {
             console.log("completed updateWeather get request");
+            $("#current-city").text(`Current City: ${data.city.name}`);
             printWeather(data);
         });
     }
