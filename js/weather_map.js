@@ -165,4 +165,8 @@ $(function() {
                 updateWeather(coords) // This updates when you drag the marker
             });
         });
+
+
+        // const Print = {}
+
     });
