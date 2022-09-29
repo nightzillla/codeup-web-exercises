@@ -1,5 +1,6 @@
 
 $(function() {
+
     // Function for days of the week
     const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     function namedDayFromDay(timeStamp){
@@ -56,7 +57,7 @@ $(function() {
                     <p class="temp">The current temperature is ${data.list[i].main.temp}</p>
                     <p class="description">Description: ${data.list[i].weather[0].description}</p>                
                     <p class="wind">Wind Speed: ${data.list[i].wind.speed} ${windCardinalDirection(data.list[i].wind.deg)}</p> 
-                    <p>Pressure: ${data.list[i].main.pressure}</p>
+                    <p class="pressure">Pressure: ${data.list[i].main.pressure}</p>
                     </div>`);
             }
         });
@@ -80,7 +81,7 @@ $(function() {
     //         }
     //     });
     // }
-    // This is the map
+    // THIS IS THE MAP
     mapboxgl.accessToken = MAPBOX_API_TOKEN;  //we gave our token a var MAPBOX on keys.js
     const map = new mapboxgl.Map({
         container: 'map',
@@ -124,8 +125,8 @@ $(function() {
     marker.on('dragend', onDragEnd);
     function updateWeather(coordinates) {
         console.log("inside updateWeather");
-        console.log(coordinates[0]);
-        console.log(coordinates[1]);
+        console.log(coordinates[0]); // lon
+        console.log(coordinates[1]); // lat
         $.get("http://api.openweathermap.org/data/2.5/forecast", {
             APPID: OPEN_WEATHER_APPID,
             lat: coordinates[1],
@@ -165,7 +166,7 @@ $(function() {
                 marker.setLngLat(coordinates).addTo(map);
                 map.setCenter(coordinates);
                 updateWeather(coordinates);
-                updateWeather(coords)
+                updateWeather(coords) // This updates when you drag the marker
             });
         });
     });

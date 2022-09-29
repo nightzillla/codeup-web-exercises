@@ -305,3 +305,6 @@ a {
 .card {
     background: linear-gradient(#FFFFFF, #9198e5);
 }
+.pressure {
+    text-align: center;
+}
