@@ -1,6 +1,5 @@
 
 $(function() {
-
     // Function for days of the week
     const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     function namedDayFromDay(timeStamp){
@@ -159,7 +158,7 @@ $(function() {
             geocode(address, MAPBOX_API_TOKEN).then(function (coordinates) {
 
                 console.log(coordinates);
-                // const userMarker = new mapboxgl.Marker().setLngLat(coordinates).addTo(map);
+                // const userMarker = new mapboxgl.Marker().setLngLat(coordinates).adFedTo(map);
                 marker.setLngLat(coordinates).addTo(map);
                 map.setCenter(coordinates);
                 updateWeather(coordinates);
