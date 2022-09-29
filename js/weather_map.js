@@ -89,9 +89,9 @@ $(function() {
         center: [-99.48962, 29.42692],
         zoom: 2
     });
-    map.addControl(new mapboxgl.NavigationControl());
+    map.addControl(new mapboxgl.NavigationControl()); // This is where you can zoom in and out
     // Add geolocate control to the map.
-    map.addControl(
+    map.addControl( // this code gives your exact location.
         new mapboxgl.GeolocateControl({
             positionOptions: {
                 enableHighAccuracy: true
@@ -102,13 +102,12 @@ $(function() {
             showUserHeading: true
         })
     );
-// I got the code from  https://docs.mapbox.com/mapbox-gl-js/example/drag-a-marker/ that creates a draggable marker
+// This is draggable marker  https://docs.mapbox.com/mapbox-gl-js/example/drag-a-marker/ that creates a draggable marker
     const marker = new mapboxgl.Marker({
         draggable: true
     })
         .setLngLat([-99.48962, 29.42692])
         .addTo(map);
-
     function onDragEnd() {
         const lngLat = marker.getLngLat();
         console.log(lngLat);
@@ -120,7 +119,6 @@ $(function() {
             `${lngLat.lat}`
         ]
         updateWeather(coords)
-
     }
     marker.on('dragend', onDragEnd);
     function updateWeather(coordinates) {
@@ -153,7 +151,6 @@ $(function() {
         }).done(function(data) {
             printWeather(data)
         });
-
         // Search Bar
         document.getElementById('searchButton').addEventListener('click', function (e) {
             e.preventDefault();
