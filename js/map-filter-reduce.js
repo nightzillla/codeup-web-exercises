@@ -87,3 +87,16 @@ under10k.forEach(({make,model, mileage}) => {
     output += `<p> I found a ${make} ${model} with ${mileage} miles</p>`;
     $("#output").html(output);
 });
+
+prices.filter(price => price < 10)
+    .map(price => {
+    const tax =(price * 0.0825).toFixed(2);
+    const total = (price + parseFloat(tax)).toFixed(2);
+    return parseFloat(total);
+    }).forEach(price => $("div").append(`<p>${price}</p>`));
+                                        // accumulator, element,
+const totalCost = prices.reduce(function (total,price){
+    return total + price;
+});
+console.log(totalCost);
+console.log(totalCost);
