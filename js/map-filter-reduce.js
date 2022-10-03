@@ -172,6 +172,16 @@ const users = [
 // var evens = numbers.filter(function(n) {
 //     return n % 2 === 0;
 // });
+/** OLD WAY */
+let threeLangOld = [];
+for (let i = 0; i < users.length; i++) {
+    console.log(users[i].languages.length);
+    if (users[i].languages.length > 2) {
+        threeLangOld.push(users[i]);
+    }
+}
+console.log(threeLangOld);
+/**  USING .filter */
 let threeLanguage = users.filter(function(person) {
         return person.languages.length >= 3;
     });
@@ -188,21 +198,23 @@ let userEmail = users.map(function(el){
 // });
 console.log(userEmail)
 
-// Use .reduce to get the total years of experience from the list of users. Once you get the total of years you can use the result to calculate the average.
+/**  Use .reduce to get the total years of experience from the list of users. Once you get the total of years you can use the result to calculate the average. */
 let totalYears = users.reduce(function(totalYears,user){
                 return user.yearsOfExperience + totalYears;
     },0);
+console.log(`The user have a total of ${totalYears/users.length} years of experience.`);
 console.log(totalYears/users.length);
-// Use .reduce to get the longest email from the list of users.
-let longestEmail = users.reduce(function(longest, user){
-    if(longest.length < user.email.length) {
-        return user.email;
-    } else {
-        return longest;
-    }
-},'');
 
-console.log(longestEmail);
+/**  Use .reduce to get the longest email from the list of users. */
+let longestEmail = users.reduce(function(longest, user){
+    // if(longest.length < user.email.length) {
+    //     return user.email;
+    // } else {
+    //     return longest;
+    // }
+    return longest.length < user.email.length ? user.email : longest
+},'');
+console.log(`The longest user email is :${longestEmail}`);
 
 // Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
 
@@ -211,3 +223,7 @@ let listUser = users.reduce(function(acc, user){
 }, 'Your instructors are: ');
 console.log(listUser);
 
+const dummyString = ",23,67,89,990,"
+let finalString =  dummyString.replace(/^,|,$/g, "")
+console.log("Original String: "+ dummyString )
+console.log("Final String: "+ finalString)
