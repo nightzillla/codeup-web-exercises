@@ -111,15 +111,15 @@
 //     }
 // }
 
-/**
- * Convert Address to Object
- * Write a function named convertAddressToObject that accepts a string that contains a street number (as a string) and street name separated by a space characters, and returns an object with properties streetNumber and streetName.
- *
- * Examples
- *
- * >> convertAddressToObject('8646 Sunny Oaks') ➞ {streetNumber: '8646', streetName: 'Sunny Oaks'}
- * >> convertAddressToObject('5408 Villa Nueva') ➞ {streetNumber: '5408', streetName: 'Villa Nueva'}
- **/
+// /**
+//  * Convert Address to Object
+//  * Write a function named convertAddressToObject that accepts a string that contains a street number (as a string) and street name separated by a space characters, and returns an object with properties streetNumber and streetName.
+//  *
+//  * Examples
+//  *
+//  * >> convertAddressToObject('8646 Sunny Oaks') ➞ {streetNumber: '8646', streetName: 'Sunny Oaks'}
+//  * >> convertAddressToObject('5408 Villa Nueva') ➞ {streetNumber: '5408', streetName: 'Villa Nueva'}
+//  **/
 //
 // let address = '8646 Sunny Oaks'
 // function convertAddressToObject (addressString){
@@ -138,18 +138,18 @@
 // address.substring ( 4 +1) = "Sunny Oaks"
 // convert string to object
 
-/**
- * Count total pets
- * Write a function named totalPets that accepts an array of objects where each object represents a person, and has a 'pets' property for their owned pets. The function should return the sum of every object's numPets property.
- *
- * Examples
- *
- * >> totalPets([
- *       {name: 'Fernando Mendoza', pets: 1},
- *       {name: 'Douglas Hirsh', pets: 8},
- *       {name: 'Kenneth Howell', pets: 2}
- *    ]) ➞ 11
- */
+// /**
+//  * Count total pets
+//  * Write a function named totalPets that accepts an array of objects where each object represents a person, and has a 'pets' property for their owned pets. The function should return the sum of every object's numPets property.
+//  *
+//  * Examples
+//  *
+//  * >> totalPets([
+//  *       {name: 'Fernando Mendoza', pets: 1},
+//  *       {name: 'Douglas Hirsh', pets: 8},
+//  *       {name: 'Kenneth Howell', pets: 2}
+//  *    ]) ➞ 11
+//  */
 // when you're trying to find total or average use = let total = 0
 // for loops you need to use [i]
 // let peopleAndPets = [
@@ -179,43 +179,43 @@
 //     }, 0)
 // }
 
-/**
- * Find the Smallest and Biggest Numbers
- * Create a function named minMax that takes an array of numbers and return both the minimum and maximum numbers, in that order.
- *
- * Examples
- * >> minMax([1, 2, 3, 4, 5]) ➞ [1, 5]
- * >> minMax([2334454, 5]) ➞ [5, 2334454]
- * >> minMax([1]) ➞ [1, 1]
- *
- * Notes
- * All test arrays will have at least one element and are valid.
- */
-let warmUpArray = [1,2,3,4,5]
-function minMax(arrayOfNumbers) {
-    let newArr = [];
-    for (let i = 0; i <arrayOfNumbers.length; i++) {
-        return minMax(warmUpArray);
-    }
-}
+// /**
+//  * Find the Smallest and Biggest Numbers
+//  * Create a function named minMax that takes an array of numbers and return both the minimum and maximum numbers, in that order.
+//  *
+//  * Examples
+//  * >> minMax([1, 2, 3, 4, 5]) ➞ [1, 5]
+//  * >> minMax([2334454, 5]) ➞ [5, 2334454]
+//  * >> minMax([1]) ➞ [1, 1]
+//  *
+//  * Notes
+//  * All test arrays will have at least one element and are valid.
+//  */
+// let warmUpArray = [1,2,3,4,5]
+// function minMax(arrayOfNumbers) {
+//     let newArr = [];
+//     for (let i = 0; i <arrayOfNumbers.length; i++) {
+//         return minMax(warmUpArray);
+//     }
+// }
 
 
-/**
- * Filter out Strings from an Array
- * Create a function named filterArray that takes an array of non-negative integers and strings and return a new array without the strings.
- *
- * Examples
- *
- * >> filterArray([1, 2, "a", "b"]) ➞ [1, 2]
- * >> filterArray([1, "a", "b", 0, 15]) ➞ [1, 0, 15]
- * >> filterArray([1, 2, "aasf", "1", "123", 123]) ➞ [1, 2, 123]
- *
- * Notes
- * Zero is a non-negative integer.
- * The given array only has integers and strings.
- * Numbers in the array should not repeat.
- * The original order must be maintained.
- */
+// /**
+//  * Filter out Strings from an Array
+//  * Create a function named filterArray that takes an array of non-negative integers and strings and return a new array without the strings.
+//  *
+//  * Examples
+//  *
+//  * >> filterArray([1, 2, "a", "b"]) ➞ [1, 2]
+//  * >> filterArray([1, "a", "b", 0, 15]) ➞ [1, 0, 15]
+//  * >> filterArray([1, 2, "aasf", "1", "123", 123]) ➞ [1, 2, 123]
+//  *
+//  * Notes
+//  * Zero is a non-negative integer.
+//  * The given array only has integers and strings.
+//  * Numbers in the array should not repeat.
+//  * The original order must be maintained.
+//  */
 
 // * Drink Sorting
 // * You will be given an array of drinks, with each drink being an object with two properties: name and price.
@@ -230,3 +230,19 @@ function minMax(arrayOfNumbers) {
 // * Examples
 // * >> sortDrinkByPrice(drinks) ➞ [{name: "lime", price: 10}, {name: "lemonade", price: 50}]
 
+/*======================================= DOM WARMUPS =========================================================*/
+
+// When the usr clicks the button that has the text "change heading", the
+// text of the <h1> element changes to read " I pwn the DOM"
+
+// Every time the user enters a character in the input with id "source", that
+// character appears in the <p> element with the id "output"
+
+$('button').on('click', function (){
+    $("h1").text("I pwn the DOM");
+});
+
+
+$("#source").on('keyup', function(){
+    $("#output").text($("#source").val());
+});
