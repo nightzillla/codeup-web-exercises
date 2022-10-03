@@ -237,12 +237,13 @@
 
 // Every time the user enters a character in the input with id "source", that
 // character appears in the <p> element with the id "output"
+$(function() {
+    $('button').on('click', function (){
+        $("h1").text("I pwn the DOM");
+    });
 
-$('button').on('click', function (){
-    $("h1").text("I pwn the DOM");
-});
 
-
-$("#source").on('keyup', function(){
-    $("#output").text($("#source").val());
+    $("#source").on('keyup', function(){
+        $("#output").text($("#source").val());
+    });
 });

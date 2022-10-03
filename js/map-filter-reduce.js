@@ -57,7 +57,18 @@
 //         mileage: 11248
 //     }
 // ];
-//
+// const milages = car.reduce ((accumulator, car) => {
+//     accumulator.push(car.mileage);
+//     return accumulator;
+// },[]);
+// console.log(milages);
+// const highestMileages = cars.reduce((accumulator, car) => {
+//     accumulator.push(car.mileage);
+//     return accumulator;
+// }, []).reduce((accumulator, mileage) => {
+//     return Math.max(accumulator, mileage);
+// });
+// console.log(highestMileages);
 // const mileages = cars.map(car => car.mileage);
 // console.log(mileages)
 //
@@ -100,7 +111,24 @@
 // });
 // console.log(totalCost);
 // console.log(totalCost);
+// The function passed to the reduce method takes an extra parameter, the accumulator
+// The accumulator is often abbreviated "acc"
 
+// Finding the average price.
+// const averagePrice = prices.reduce((function(accumulator, current, index, array){
+//     accumulator += current;
+//     if(index === array.length - 1) {
+//         return accumulator/array.length;
+//     }
+//     return accumulator;
+// }));
+
+// console.log("You have $158.76 in your shopping cart");
+// const total = prices.reduce(function(total, priceOfItem){
+//     return total + priceOfItem
+// }, 158.76);
+// console.log(`Your total cost is ${total.toFixed(2)}.`);
+// // forEach (element, index, array)
 
 const users = [
     {
@@ -149,7 +177,7 @@ let threeLanguage = users.filter(function(person) {
     });
 console.log(threeLanguage);
 
-// // Use .map to create an array of strings where each element is a user's email address
+// Use .map to create an array of strings where each element is a user's email address
 let userEmail = users.map(function(el){
     return el.email
 });
@@ -175,4 +203,11 @@ let longestEmail = users.reduce(function(longest, user){
 },'');
 
 console.log(longestEmail);
+
 // Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
+
+let listUser = users.reduce(function(acc, user){
+    return user.name + "," + acc;
+}, '');
+console.log(listUser);
+
