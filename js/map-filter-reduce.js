@@ -208,6 +208,6 @@ console.log(longestEmail);
 
 let listUser = users.reduce(function(acc, user){
     return acc + user.name + ",";
-}, '');
+}, 'Your instructors are: ');
 console.log(listUser);
 

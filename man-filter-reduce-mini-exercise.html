@@ -58,24 +58,51 @@
     ];
     // MAP
     // TODO 1: using map, create a new array of dog names from the dogs array
+    let dogNames = dogs.map(dg => dg.dogName)
+    // let dogNames = dogs.map(function(dg) {
+    //     return dg.dogName
+    // });
     console.log('Exercise 1:');
+    console.log(dogNames);
     // TODO 2: using map, create a new array of dog ages from the dogs array
+    let dogAges = dogs.map(function (dg) {
+        return dg.age;
+    })
     console.log('Exercise 2:');
+    console.log(dogAges)
     // TODO 3: using map, create a new array of dog objects from the dogs array that only have dog names and age properties and values
+    let dogsObject = dogs.map(function(dg){
+        delete dg.isTrained
+        return dg
+    });
+    let dogsValue = dogs.map(function (dg) {
+        dg.values = "new properties"
+    });
     console.log('Exercise 3:');
+    console.log(dogsValue);
+    console.log(dogsObject);
     // FILTER
     // TODO 4: using filter, create a new array containing only dogs younger than 10 years old
+    let youngerThanTen = dogs.filter( dg => dg.age < 10)
     console.log('Exercise 4:');
+    console.log(youngerThanTen);
     // TODO 5: using filter, create a new array containing only dogs named 'Lexie'
+    let dogsNamedLexie = dogs.filter( dg => dg.dogName === 'Lexie')
     console.log('Exercise 5:');
+    console.log(dogsNamedLexie);
     // TODO 6: using filter, create a new array containing only dogs that are trained and younger than 10
+    let trainDogsAndYoungerThanTen = dogs.filter(dg => dg.isTrained === true)
+    let trainDogsAndUnderTen = youngerThanTen
     console.log('Exercise 6:');
+    console.log(trainDogsAndYoungerThanTen);
+
     // REDUCE
     // TODO 7: using reduce, return a string containing all dog names together with no spaces ("BubblesLexieDoggy...")
     console.log('Exercise 7:');
     // TODO 8: using reduce, return the total of adding all dog ages together (18)
     console.log('Exercise 8:');
     // TODO 9: using reduce, return an array of dog objects with all isTrained properties set to true
+    let dogsCopy = JSON.parse(JSON.stringify(dogs));
     console.log('Exercise 9:');
     // EXTRA CHALLENGES
     // TODO 10: what is the average age of each dog?
