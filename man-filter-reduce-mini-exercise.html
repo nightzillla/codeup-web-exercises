@@ -95,15 +95,24 @@
     let trainDogsAndUnderTen = youngerThanTen
     console.log('Exercise 6:');
     console.log(trainDogsAndYoungerThanTen);
-
     // REDUCE
     // TODO 7: using reduce, return a string containing all dog names together with no spaces ("BubblesLexieDoggy...")
     console.log('Exercise 7:');
     // TODO 8: using reduce, return the total of adding all dog ages together (18)
     console.log('Exercise 8:');
     // TODO 9: using reduce, return an array of dog objects with all isTrained properties set to true
-    let dogsCopy = JSON.parse(JSON.stringify(dogs));
+    let allDogsTrain = dogs.reduce((accumulator, dog, index, copyArray) => {
+            let newDog = {
+                dogName: dog.dogName,
+                age: dog.age,
+                isTrained: true
+        };
+            accumulator.push(newDog);
+            return accumulator;
+    }, []);
+    // let dogsCopy = JSON.parse(JSON.stringify(dogs));
     console.log('Exercise 9:');
+    console.log(allDogsTrain)
     // EXTRA CHALLENGES
     // TODO 10: what is the average age of each dog?
     console.log('Exercise 10:');

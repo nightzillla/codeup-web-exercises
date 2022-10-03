@@ -187,7 +187,7 @@ let threeLanguage = users.filter(function(person) {
     });
 console.log(threeLanguage);
 
-// Use .map to create an array of strings where each element is a user's email address
+/** Use .map to create an array of strings where each element is a user's email address */
 let userEmail = users.map(function(el){
     return el.email
 });
@@ -223,7 +223,3 @@ let listUser = users.reduce(function(acc, user){
 }, 'Your instructors are: ');
 console.log(listUser);
 
-const dummyString = ",23,67,89,990,"
-let finalString =  dummyString.replace(/^,|,$/g, "")
-console.log("Original String: "+ dummyString )
-console.log("Final String: "+ finalString)
