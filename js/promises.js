@@ -21,28 +21,13 @@ function lastPush(userName) {
 
 console.log(lastPush("nightzillla"));
 
-
-
-
-
-// fetch('https://api.github.com/users')
-//     .then(response => {
-//         response.json()
-//             .then(users => {
-//                 users.forEach(user => {
-//                     console.log(user) // here get date of users last commit *CommitCommentEvent
-//                 })
-//             })
-//     })
-
-
-
-// function lastCommit(userName) {
-//     fetch(`https://api.github.com/users/${userName}/events/public`, {'headers': {'Authorization': "GIT_TOKEN"}})
-//         .then(response => response.json()
-//             .then(events => {
-//                 for(let event of events) {
-//                     if (event.type === "PushEvent") {
-//                         let lastPush = event
-//                         console.log(lastPush[0]["created_at"]);
-//                     }
+// async function getUserLastCommitAsync(username) {
+//     try {
+//         let response = await fetch(`https://api.github.com/usersss/${username}`);
+//         let events = await response.json();
+//         console.log(events);
+//     }
+//     catch(err) {
+//         console.log(err);
+//     }
+// }
