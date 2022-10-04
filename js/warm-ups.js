@@ -261,7 +261,7 @@ $('#loremParagraphs h2').mouseenter(function(){
 $('#hotPinkIt').on('click', function() {
     $('#loremParagraphs').toggleClass('hotpink');
 });
-// When user clicks blinkPink it will set off hotpink
+// Bonus challenge: when the user clicks on the "Pink Blinky" button, all the text in the div with the id of loremParagraphs alternates between black and hotpink once every three seconds.
 $('#blinkPink').on('click', function() {
     setInterval(function(){
     $('#loremParagraphs').toggleClass('hotpink');

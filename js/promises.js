@@ -67,4 +67,24 @@ const aPromise = new Promise((resolve, reject) => {
 
 aPromise.then(value => console.log(value)).catch(error => console.log(error));
 // fetch call will return a promise.
-fetch("data/murals.json").then(response => response.json()).then(data => console.log(data));
+// fetch("data/murals.json").then(response => response.json()).then(data => console.log(data));
+const myFetchPromise = fetch("data/murals.json").then(response => {
+    console.log(response.status);
+    console.log(response.headers);
+    console.log(response.url);
+    return response.json();
+}
+    ).then(data => console.log(data)).catch(error => console.log("Oh no, it doesn't work!"))
+    .finally(() => console.log("I'm gonna happen no matter what"));
+
+console.log(myFetchPromise);
+
+fetch("https://api.github.com/users/nightzillla", {
+    headers: {
+        'Authorization' : 'token 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'
+    }
+}).then( response => response.json())
+    .then( events => console.log(events))
+    .catch( error => console.error(error));
+
+
