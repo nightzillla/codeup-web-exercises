@@ -242,8 +242,28 @@ $(function() {
         $("h1").text("I pwn the DOM");
     });
 
-
     $("#source").on('keyup', function(){
         $("#output").text($("#source").val());
     });
+});
+
+// When the mouse enters the h2 with the text "Lorem Generator",
+// A paragraph containing lorem appears in the div with the id of loremParagraphs
+const lorem ="<p>\"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus commodi cumque ducimus enim impedit in incidunt labore, magni nemo non placeat porro quae quaerat quam reiciendis saepe similique, velit voluptatem.</p>"
+// $('#loremParagraphs').mouseenter(function() {
+//     $('h2').text("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus commodi cumque ducimus enim impedit in incidunt labore, magni nemo non placeat porro quae quaerat quam reiciendis saepe similique, velit voluptatem.")
+// });
+$('#loremParagraphs h2').mouseenter(function(){
+    $('#loremParagraphs').append(lorem);
+});
+// When the user clicks on the "Hot Pink It" button, all the text in the div with that id of loremParagraphs becomes hotpink if it's black, or black if it's hotpink
+// toggle will make it go back and forth
+$('#hotPinkIt').on('click', function() {
+    $('#loremParagraphs').toggleClass('hotpink');
+});
+// When user clicks blinkPink it will set off hotpink
+$('#blinkPink').on('click', function() {
+    setInterval(function(){
+    $('#loremParagraphs').toggleClass('hotpink');
+    }, 3000);
 });

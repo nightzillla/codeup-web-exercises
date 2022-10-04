@@ -8,7 +8,7 @@ $(function(){
     let myName = 'Danny';
     $("h1").addClass("text-danger"); //addClass means to do something
     $("#myFavoriteDiv").append(` 
-    <h1>Underneath the List ${myName}</h1>
+    <p>Underneath the List ${myName}</p>
 
     `); // append add stuff
     // $("ul").children().last().prev().addClass("text-warning");
@@ -22,6 +22,10 @@ $(function(){
     $("ul").last().children().addClass("text-info")
     $("ul li:nth-child(1)").click(function (){
         alert("you click first child!");
+    });
+    // This is for the button
+    $('button').on('click', function (){
+        $("h1").text("lorem");
     });
 });
 
