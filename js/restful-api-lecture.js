@@ -13,17 +13,17 @@
 
 // https://glitch.com/amused-typical-skunk
 
-// The R in CRUD: READ
+/** The R in CRUD: READ */
 const booksURL = "https://amused-typical-skunk.glitch.me/books";
 const movieURL = "https://amused-typical-skunk.glitch.me/movies";
 function getMovies() {
-    fetch("https://amused-typical-skunk.glitch.me/movies")
-        .then(resp => resp.json()).then(data=>console.log(data));
+    fetch(movieURL).then(resp => resp.json()).then(data=>console.log(data));
 }
 
 getMovies();
 
-// The C in CRUD: CREATE
+//*************************** The C in CRUD: CREATE ********************************************//
+/** The C in CRUD: CREATE */
 
 const bookToPost = {
     title: "Eleanor of Aquitaine",
@@ -34,39 +34,39 @@ const bookToPost = {
 }
 
 const postOptions = {
-    method: 'POST',
+    method: 'POST', // Create a new post
     headers: {
         'Content-Type' : 'application/json'
     },
     body: JSON.stringify(bookToPost)
 }
-
 function getBooks() {
     fetch(booksURL).then(resp => resp.json()).then(data=>console.log(data));
 }
 
 getBooks();
 
-// fetch(booksURL, postOptions).then(getBooks);
+// fetch(booksURL, postOptions).then(getBooks); // This will create a new book in the array
 
-// The U in CRUD: Updating with PUT and PATCH request
+/** The U in CRUD: Updating with PUT and PATCH request */
 // We'll use PUT to replace the entire content
-// We'll use PATCH to modify only part fo the entry
+// We'll use PATCH to modify only part of the entry
 
 let modification = {
-    title: "Eleanor of Aquitaine: Queen of France, Queen of England"
+    title: "Eleanor of Aquitaine: Queen of France, Queen of England5"
+
 }
 
 const patchOptions = {
-    method: 'PATCH',
+    method: 'PATCH', // It adds to the existing array base on 'id' partial
     headers: {
         'Content-Type' : 'application/json'
     },
     body: JSON.stringify(modification)
 }
-// This select "id": 4
-// THis will modify
-// fetch(booksURL + "/4", patchOptions).then(getBooks);
+
+// This will modify the book base on "id"
+// fetch(booksURL + "/5 ", patchOptions).then(getBooks);
 
 modification = {
     title: "Eleanor of Aquitaine and the Four Kings",
@@ -77,22 +77,22 @@ modification = {
 }
 
 const putOptions = {
-    method: 'PUT',
+    method: 'PUT', // Modify the entire content
     headers: {
         'Content-Type' : 'application/json'
     },
     body: JSON.stringify(modification)
 }
 // This will modify
-fetch(booksURL + "/1", putOptions).then(getBooks);
+// fetch(booksURL + "/5", putOptions).then(getBooks);
 
-// THE D IN CRUD -- Delete
+/** THE D IN CRUD -- Delete */
 
 const deleteOptions = {
-    method: 'DELETE',
+    method: 'DELETE', // Delete a post
     headers: {
         'Content-Type' : 'application/json'
     }
 }
 // This will modify
-// fetch(booksURL + "/3", deleteOptions).then(getBooks);
+fetch(booksURL + "/2", deleteOptions).then(getBooks);
