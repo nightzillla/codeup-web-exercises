@@ -56,6 +56,7 @@ let modification = {
     title: "Eleanor of Aquitaine: Queen of France, Queen of England5"
 
 }
+console.log(modification);
 
 const patchOptions = {
     method: 'PATCH', // It adds to the existing array base on 'id' partial
@@ -65,8 +66,9 @@ const patchOptions = {
     body: JSON.stringify(modification)
 }
 
+console.log(patchOptions);
 // This will modify the book base on "id"
-// fetch(booksURL + "/5 ", patchOptions).then(getBooks);
+fetch(booksURL + "/5 ", patchOptions).then(getBooks);
 
 modification = {
     title: "Eleanor of Aquitaine and the Four Kings",
